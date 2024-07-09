@@ -1,5 +1,9 @@
 package net.eitan.mccourse;
 
+
+import net.eitan.mccourse.block.ModBlocks;
+import net.eitan.mccourse.item.ModItemGroup;
+import net.eitan.mccourse.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,6 +15,9 @@ public class McCourse implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+		ModItemGroup.registerItemGroups();
+
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
