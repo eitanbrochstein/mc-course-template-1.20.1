@@ -24,7 +24,7 @@
                     }
                   }
                 ],
-                "name": "mccourse:deepslate_pink_garnet_ore"
+                "name": "mc-course:deepslate_pink_garnet_ore"
               },
               {
                 "type": "minecraft:item",
@@ -38,7 +38,7 @@
                     "function": "minecraft:explosion_decay"
                   }
                 ],
-                "name": "mccourse:raw_pink_garnet"
+                "name": "mc-course:raw_pink_garnet"
               }
             ]
           }

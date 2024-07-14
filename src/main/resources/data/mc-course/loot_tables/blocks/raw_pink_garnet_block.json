@@ -11,7 +11,7 @@
         "entries": [
           {
             "type": "minecraft:item",
-            "name": "mccourse:raw_pink_garnet_block"
+            "name": "mc-course:raw_pink_garnet_block"
           }
         ],
         "rolls": 1.0
