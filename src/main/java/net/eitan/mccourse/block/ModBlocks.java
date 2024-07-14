@@ -6,17 +6,19 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
 
     public static final Block PINK_GARNET_BLOCK = registerBlock("pink_garnet_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).breakInstantly()),
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).strength(5, 5)),
             Rarity.EPIC
             // also create() to make your own rules
     );
@@ -30,25 +32,25 @@ public class ModBlocks {
 
     public static final Block DEEPSLATE_PINK_GARNET_ORE = registerBlock(
             "deepslate_pink_garnet_ore",
-            new Block(FabricBlockSettings.create().collidable(true).hardness(3)),
+            new ExperienceDroppingBlock(FabricBlockSettings.create().collidable(true).hardness(3), UniformIntProvider.create(200, 400)),
             Rarity.RARE
     );
 
     public static final Block END_STONE_PINK_GARNET_ORE = registerBlock(
             "end_stone_pink_garnet_ore",
-            new Block(FabricBlockSettings.create().collidable(true).hardness(6)),
+            new ExperienceDroppingBlock(FabricBlockSettings.create().collidable(true).hardness(6), UniformIntProvider.create(500, 1000)),
             Rarity.EPIC
     );
 
     public static final Block NETHER_PINK_GARNET_ORE = registerBlock(
             "nether_pink_garnet_ore",
-            new Block(FabricBlockSettings.create().collidable(true).strength(1,1)),
+            new ExperienceDroppingBlock(FabricBlockSettings.create().collidable(true).strength(1,1), UniformIntProvider.create(400, 600)),
             Rarity.UNCOMMON
     );
 
     public static final Block PINK_GARNET_ORE = registerBlock(
             "pink_garnet_ore",
-            new Block(FabricBlockSettings.create().collidable(true).strength(2, 3)),
+            new ExperienceDroppingBlock(FabricBlockSettings.create().collidable(true).strength(2, 3), UniformIntProvider.create(100, 200)),
             Rarity.RARE
     );
 

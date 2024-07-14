@@ -1,6 +1,5 @@
 package net.eitan.mccourse;
 
-
 import net.eitan.mccourse.block.ModBlocks;
 import net.eitan.mccourse.item.ModItemGroup;
 import net.eitan.mccourse.item.ModItems;
