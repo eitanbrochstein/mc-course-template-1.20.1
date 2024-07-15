@@ -1,6 +1,7 @@
 {
   "item.mc-course.pink_garnet": "Pink Garnet",
   "item.mc-course.raw_pink_garnet": "Raw Pink Garnet",
+  "item.mc-course.metal_detector": "Metal Detector",
 
   "block.mc-course.pink_garnet_block": "Block of Pink Garnet",
   "block.mc-course.raw_pink_garnet_block": "Raw Pink Garnet Block",
@@ -8,6 +9,9 @@
   "block.mc-course.end_stone_pink_garnet_ore": "End Stone Pink Garnet Ore",
   "block.mc-course.nether_pink_garnet_ore": "Nether Pink Garnet Ore",
   "block.mc-course.pink_garnet_ore": "Pink Garnet Ore",
+  "block.mc-course.sound_block": "Sound Block",
+
+  "item.mc-course.metal_detector.no_valueables": "No Valuables Found!",
 
   "itemgroup.pink_garnet_group": "Pink Garnet Course Client"
 }

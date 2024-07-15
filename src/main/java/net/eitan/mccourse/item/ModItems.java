@@ -2,6 +2,7 @@ package net.eitan.mccourse.item;
 
 import net.eitan.mccourse.McCourse;
 import net.eitan.mccourse.block.ModBlocks;
+import net.eitan.mccourse.item.custom.MetalDetectorItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -18,6 +19,10 @@ public class ModItems {
 
     public static final Item RAW_PINK_GARNET = registerItem("raw_pink_garnet",
             new Item(new FabricItemSettings().maxCount(16))
+    );
+
+    public static final Item METAL_DETECTOR = registerItem("metal_detector",
+        new MetalDetectorItem(new FabricItemSettings().maxDamage(256))
     );
     // Register a new item with a name, and the object item, the registries give the type to the Item
     private static Item registerItem(String name, Item item) {

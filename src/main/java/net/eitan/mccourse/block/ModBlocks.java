@@ -1,6 +1,7 @@
 package net.eitan.mccourse.block;
 
 import net.eitan.mccourse.McCourse;
+import net.eitan.mccourse.block.custom.SoundBlock;
 import net.eitan.mccourse.item.ModItems;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -52,6 +53,12 @@ public class ModBlocks {
             "pink_garnet_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.STONE), UniformIntProvider.create(100, 200)),
             Rarity.RARE
+    );
+
+    public static final Block SOUND_BLOCK = registerBlock(
+        "sound_block",
+        new SoundBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
+        Rarity.COMMON 
     );
 
     private static Block registerBlock(String name, Block block, Rarity rarity) {
