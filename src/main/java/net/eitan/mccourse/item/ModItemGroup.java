@@ -21,6 +21,9 @@ public class ModItemGroup {
                         entries.add(ModItems.RAW_PINK_GARNET);
                         entries.add(ModItems.METAL_DETECTOR);
 
+                        entries.add(ModItems.CAULIFLOWER);
+                        entries.add(ModItems.PEAT_BRICK);
+
                         entries.add(ModBlocks.PINK_GARNET_BLOCK);
                         entries.add(ModBlocks.RAW_PINK_GARNET_BLOCK);
                         entries.add(ModBlocks.DEEPSLATE_PINK_GARNET_ORE);

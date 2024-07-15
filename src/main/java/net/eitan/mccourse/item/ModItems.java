@@ -24,6 +24,14 @@ public class ModItems {
     public static final Item METAL_DETECTOR = registerItem("metal_detector",
         new MetalDetectorItem(new FabricItemSettings().maxDamage(256))
     );
+
+    public static final Item CAULIFLOWER = registerItem("cauliflower",
+        new Item(new FabricItemSettings().food(ModFoodComponents.CAULIFLOWER))
+    );
+
+    public static final Item PEAT_BRICK = registerItem("peat_brick",
+        new Item(new FabricItemSettings())
+    );
     // Register a new item with a name, and the object item, the registries give the type to the Item
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(McCourse.MOD_ID, name), item);
