@@ -2,6 +2,7 @@ package net.eitan.mccourse.item.custom;
 
 import java.util.List;
 
+import net.eitan.mccourse.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -67,13 +68,6 @@ public class MetalDetectorItem extends Item {
     }
 
     public boolean isValueableBlock(BlockState blockState) {
-        return blockState.getBlock() == Blocks.IRON_ORE 
-        || blockState.getBlock() == Blocks.DIAMOND_ORE
-        || blockState.getBlock() == Blocks.GOLD_ORE
-        || blockState.getBlock() == Blocks.REDSTONE_ORE
-        || blockState.getBlock() == Blocks.DEEPSLATE_DIAMOND_ORE
-        || blockState.getBlock() == Blocks.DEEPSLATE_GOLD_ORE
-        || blockState.getBlock() == Blocks.DEEPSLATE_REDSTONE_ORE
-        || blockState.getBlock() == Blocks.DEEPSLATE_IRON_ORE;
+        return blockState.isIn(ModTags.Blocks.METAL_DETECTOR_DETECTABLE_BLOCKS);
     }
 }
