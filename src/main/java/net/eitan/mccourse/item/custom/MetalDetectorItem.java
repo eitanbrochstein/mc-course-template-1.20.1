@@ -1,14 +1,20 @@
 package net.eitan.mccourse.item.custom;
 
+import java.util.List;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 
 public class MetalDetectorItem extends Item {
     public MetalDetectorItem(Settings settings) {
@@ -49,6 +55,15 @@ public class MetalDetectorItem extends Item {
 
     private void outputValueableCoordinates(BlockPos position, PlayerEntity player, Block block) {
         player.sendMessage(Text.literal("Valuable Found! " + block.getName().getString() + " at (" + position.getX() + ", " + position.getY() + ", " + position.getZ() + ")"));
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
+        if (Screen.hasShiftDown()) {
+            tooltip.add(Text.translatable("tooltip.mc-course.metal_detector.tooltip.shift"));
+        } else {
+            tooltip.add(Text.translatable("tooltip.mc-course.metal_detector.tooltip"));
+        }
     }
 
     public boolean isValueableBlock(BlockState blockState) {

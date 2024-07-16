@@ -15,5 +15,10 @@
 
   "item.mc-course.metal_detector.no_valueables": "No Valuables Found!",
 
-  "itemgroup.pink_garnet_group": "Pink Garnet Course Client"
+  "itemgroup.pink_garnet_group": "Pink Garnet Course Client",
+
+  "tooltip.mc-course.metal_detector.tooltip.shift": "Right click to find valuables!",
+  "tooltip.mc-course.metal_detector.tooltip": "Press §eSHIFT§r for more information!",
+  "tooltip-mc-course.sound_block.tooltip.shift":"Press §eSHIFT§r for more information!",
+  "tooltip-mc-course.sound_block.tooltip":"Plays a nice sound when activated, especially when you shift!"
 }
