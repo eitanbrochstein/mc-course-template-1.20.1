@@ -20,7 +20,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(ModTags.Blocks.METAL_DETECTOR_DETECTABLE_BLOCKS)
         .add(ModBlocks.PINK_GARNET_ORE)
         .forceAddTag(BlockTags.GOLD_ORES)
-        .forceAddTag(BlockTags.GOLD_ORES)
         .forceAddTag(BlockTags.COAL_ORES)
         .forceAddTag(BlockTags.COPPER_ORES)
         .forceAddTag(BlockTags.DIAMOND_ORES)
