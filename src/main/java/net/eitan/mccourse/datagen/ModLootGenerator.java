@@ -7,7 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 
 public class ModLootGenerator extends FabricBlockLootTableProvider {
 
-    protected ModLootGenerator(FabricDataOutput dataOutput) {
+    public ModLootGenerator(FabricDataOutput dataOutput) {
         super(dataOutput);
     }
     
