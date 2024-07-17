@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:pink_garnet_slab"
+        "recipe": "minecraft:pink_garnet"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:pink_garnet_slab"
+      "minecraft:pink_garnet"
     ]
   },
   "sends_telemetry_event": false

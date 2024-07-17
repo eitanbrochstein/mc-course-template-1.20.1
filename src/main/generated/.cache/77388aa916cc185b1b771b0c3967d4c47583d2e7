@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-17T17:43:32.7338761	Mc Course/Model Definitions
+// 1.20.1	2024-07-17T17:50:42.4030643	Mc Course/Model Definitions
 780f2d75aabe79fc7432e9f7534c7f41dcead963 assets\mc-course\blockstates\deepslate_pink_garnet_ore.json
 82ca12b3c59f58e6f31e5629ed3afa123327b14a assets\mc-course\models\block\deepslate_pink_garnet_ore.json
 183b441f768caa0162347e0c969eabfba2e2031e assets\mc-course\models\block\pink_garnet_stairs.json
@@ -24,8 +24,8 @@ b092c61a213061fad2708a6425122147cde419a3 assets\mc-course\blockstates\pink_garne
 a364c4505aa491e5dac7534ef16984446e66ca6f assets\mc-course\models\item\pink_garnet.json
 c647b474c3dabe10554a2bd490678c1c2a6281c2 assets\mc-course\models\item\pink_garnet_ore.json
 80ecde20ff7812730697786637ef45fe5d25fedd assets\mc-course\models\block\nether_pink_garnet_ore.json
-7cdd7f3287f9bc083a64b38a81cca389dc2bfc4d assets\mc-course\models\item\nether_pink_garnet_ore.json
 c5612c52047ba18f1de7533b5f7fbcaf83a1563f assets\mc-course\models\block\pink_garnet_stairs_inner.json
+7cdd7f3287f9bc083a64b38a81cca389dc2bfc4d assets\mc-course\models\item\nether_pink_garnet_ore.json
 30f241e8dc99ff5b80de752f65fde4bf747126a4 assets\mc-course\blockstates\raw_pink_garnet_block.json
 c07deceff150fe3893fe209bdb9734d458dc7118 assets\mc-course\models\item\pink_garnet_stairs.json
 8d307190583c8b1805b3cf71db33c00dbe69d11f assets\mc-course\blockstates\nether_pink_garnet_ore.json
