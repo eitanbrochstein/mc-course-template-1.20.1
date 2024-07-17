@@ -7,6 +7,8 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.block.SlabBlock;
+import net.minecraft.block.StairsBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -58,6 +60,18 @@ public class ModBlocks {
         "sound_block",
         new SoundBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
         Rarity.COMMON 
+    );
+
+    public static final Block PINK_GARNET_STAIRS = registerBlock(
+        "pink_garnet_stairs",
+        new StairsBlock(ModBlocks.PINK_GARNET_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
+        Rarity.UNCOMMON
+    );
+
+    public static final Block PINK_GARNET_SLAB = registerBlock(
+        "pink_garnet_slab",
+        new SlabBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
+        Rarity.UNCOMMON
     );
 
     private static Block registerBlock(String name, Block block, Rarity rarity) {
