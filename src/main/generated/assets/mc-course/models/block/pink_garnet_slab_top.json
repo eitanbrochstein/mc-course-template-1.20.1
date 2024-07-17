@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "mc-course:block/pink_garnet_block",
+    "side": "mc-course:block/pink_garnet_block",
+    "top": "mc-course:block/pink_garnet_block"
+  }
+}

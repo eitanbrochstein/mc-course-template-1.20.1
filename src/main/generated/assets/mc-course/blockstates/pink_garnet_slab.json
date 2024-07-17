@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "mc-course:block/pink_garnet_slab"
+    },
+    "type=double": {
+      "model": "mc-course:block/pink_garnet_block"
+    },
+    "type=top": {
+      "model": "mc-course:block/pink_garnet_slab_top"
+    }
+  }
+}
