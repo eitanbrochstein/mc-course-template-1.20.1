@@ -1,0 +1,5 @@
+// 1.20.1	2024-07-17T12:06:52.1790789	Mc Course/Tags for minecraft:block
+3fd496bf8db79b47e41e5ffff880f39e23ce60f9 data\minecraft\tags\blocks\mineable\pickaxe.json
+d679cadce3e41914a198481360560a2ee0a01499 data\mc-course\tags\blocks\metal_detector_detectable_blocks.json
+e0317a1af22ae04921985c19f21ffc036670343f data\minecraft\tags\blocks\needs_iron_tool.json
+1dcfd429d8b4586d9971f953a88de4b2096948aa data\minecraft\tags\blocks\needs_diamond_tool.json

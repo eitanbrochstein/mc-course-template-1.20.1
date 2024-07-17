@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "mc-course:pink_garnet_ore",
+    "mc-course:pink_garnet_block",
+    "mc-course:raw_pink_garnet_block",
+    "mc-course:deepslate_pink_garnet_ore",
+    "mc-course:end_stone_pink_garnet_ore",
+    "mc-course:nether_pink_garnet_ore"
+  ]
+}
