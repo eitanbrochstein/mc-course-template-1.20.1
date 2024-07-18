@@ -8,12 +8,14 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockSetType;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ButtonBlock;
+import net.minecraft.block.DoorBlock;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.block.FenceBlock;
 import net.minecraft.block.FenceGateBlock;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
+import net.minecraft.block.TrapdoorBlock;
 import net.minecraft.block.WallBlock;
 import net.minecraft.block.WoodType;
 import net.minecraft.block.PressurePlateBlock.ActivationRule;
@@ -112,6 +114,18 @@ public class ModBlocks {
         Rarity.UNCOMMON
     );
 
+    public static final Block PINK_GARNET_DOOR = registerBlock(
+        "pink_garnet_door",
+        new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK), BlockSetType.IRON),
+        Rarity.UNCOMMON
+    );
+
+    public static final Block PINK_GARNET_TRAPDOOR = registerBlock(
+        "pink_garnet_trapdoor",
+        new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK), BlockSetType.IRON),
+        Rarity.UNCOMMON
+    );
+    
     private static Block registerBlock(String name, Block block, Rarity rarity) {
         registerBlockItem(name, block, rarity);
         // minecraft type, name with mod id, block itself
