@@ -6,8 +6,13 @@ import net.eitan.mccourse.item.custom.MetalDetectorItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.AxeItem;
+import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.ShovelItem;
+import net.minecraft.item.SwordItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -32,6 +37,27 @@ public class ModItems {
     public static final Item PEAT_BRICK = registerItem("peat_brick",
         new Item(new FabricItemSettings())
     );
+
+    public static final Item PINK_GARNET_SWORD = registerItem("pink_garnet_sword",
+        new SwordItem(ModToolMaterial.PINK_GARNET, 7, 20f, new FabricItemSettings())
+    );
+
+    public static final Item PINK_GARNET_PICKAXE = registerItem("pink_garnet_pickaxe",
+        new PickaxeItem(ModToolMaterial.PINK_GARNET, 6, 1.5f, new FabricItemSettings())
+    );
+
+    public static final Item PINK_GARNET_SHOVEL = registerItem("pink_garnet_shovel",
+        new ShovelItem(ModToolMaterial.PINK_GARNET, 2, 1f, new FabricItemSettings())
+    );
+
+    public static final Item PINK_GARNET_AXE = registerItem("pink_garnet_axe",
+        new AxeItem(ModToolMaterial.PINK_GARNET, 10, 1.5f, new FabricItemSettings())
+    );
+
+    public static final Item PINK_GARNET_HOE = registerItem("pink_garnet_hoe",
+        new HoeItem(ModToolMaterial.PINK_GARNET, -5, 10f, new FabricItemSettings())
+    );
+
     // Register a new item with a name, and the object item, the registries give the type to the Item
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(McCourse.MOD_ID, name), item);
