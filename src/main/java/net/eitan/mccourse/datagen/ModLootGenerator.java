@@ -19,6 +19,9 @@ public class ModLootGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.PINK_GARNET_STAIRS);
         addDrop(ModBlocks.PINK_GARNET_PRESSURE_PLATE);
         addDrop(ModBlocks.PINK_GARNET_BUTTON);
+        addDrop(ModBlocks.PINK_GARNET_FENCE);
+        addDrop(ModBlocks.PINK_GARNET_FENCE_GATE);
+        addDrop(ModBlocks.PINK_GARNET_WALL);
 
         // silk touch, non silk touch
         addDrop(ModBlocks.PINK_GARNET_ORE, oreDrops(ModBlocks.PINK_GARNET_ORE, ModItems.RAW_PINK_GARNET));

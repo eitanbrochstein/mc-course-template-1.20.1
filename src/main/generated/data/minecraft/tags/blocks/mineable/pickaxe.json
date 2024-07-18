@@ -10,6 +10,9 @@
     "mc-course:pink_garnet_slab",
     "mc-course:pink_garnet_stairs",
     "mc-course:pink_garnet_pressure_plate",
-    "mc-course:pink_garnet_button"
+    "mc-course:pink_garnet_button",
+    "mc-course:pink_garnet_fence",
+    "mc-course:pink_garnet_fence_gate",
+    "mc-course:pink_garnet_wall"
   ]
 }

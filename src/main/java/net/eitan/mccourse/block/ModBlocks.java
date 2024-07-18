@@ -9,9 +9,13 @@ import net.minecraft.block.BlockSetType;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ButtonBlock;
 import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.block.FenceBlock;
+import net.minecraft.block.FenceGateBlock;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
+import net.minecraft.block.WallBlock;
+import net.minecraft.block.WoodType;
 import net.minecraft.block.PressurePlateBlock.ActivationRule;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -74,19 +78,37 @@ public class ModBlocks {
 
     public static final Block PINK_GARNET_SLAB = registerBlock(
         "pink_garnet_slab",
-        new SlabBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
+        new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_SLAB)),
         Rarity.UNCOMMON
     );
 
     public static final Block PINK_GARNET_BUTTON = registerBlock(
         "pink_garnet_button",
-        new ButtonBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK), BlockSetType.IRON, 10, true),
+        new ButtonBlock(FabricBlockSettings.copyOf(Blocks.STONE_BUTTON), BlockSetType.IRON, 10, true),
         Rarity.UNCOMMON
     );
 
     public static final Block PINK_GARNET_PRESSURE_PLATE = registerBlock(
         "pink_garnet_pressure_plate",
-        new PressurePlateBlock(ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.IRON_BLOCK), BlockSetType.IRON),
+        new PressurePlateBlock(ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.NETHER_BRICK_FENCE), BlockSetType.IRON),
+        Rarity.UNCOMMON
+    );
+
+    public static final Block PINK_GARNET_FENCE = registerBlock(
+        "pink_garnet_fence",
+        new FenceBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
+        Rarity.UNCOMMON
+    );
+
+    public static final Block PINK_GARNET_FENCE_GATE = registerBlock(
+        "pink_garnet_fence_gate",
+        new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK), WoodType.ACACIA),
+        Rarity.UNCOMMON
+    );
+
+    public static final Block PINK_GARNET_WALL = registerBlock(
+        "pink_garnet_wall",
+        new WallBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
         Rarity.UNCOMMON
     );
 

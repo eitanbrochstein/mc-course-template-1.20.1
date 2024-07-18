@@ -5,6 +5,9 @@
     "mc-course:pink_garnet_ore",
     "mc-course:deepslate_pink_garnet_ore",
     "mc-course:pink_garnet_slab",
-    "mc-course:pink_garnet_stairs"
+    "mc-course:pink_garnet_stairs",
+    "mc-course:pink_garnet_fence",
+    "mc-course:pink_garnet_fence_gate",
+    "mc-course:pink_garnet_wall"
   ]
 }
