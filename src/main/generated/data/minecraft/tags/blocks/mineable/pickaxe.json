@@ -6,6 +6,10 @@
     "mc-course:raw_pink_garnet_block",
     "mc-course:deepslate_pink_garnet_ore",
     "mc-course:end_stone_pink_garnet_ore",
-    "mc-course:nether_pink_garnet_ore"
+    "mc-course:nether_pink_garnet_ore",
+    "mc-course:pink_garnet_slab",
+    "mc-course:pink_garnet_stairs",
+    "mc-course:pink_garnet_pressure_plate",
+    "mc-course:pink_garnet_button"
   ]
 }

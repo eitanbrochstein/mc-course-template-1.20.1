@@ -5,10 +5,14 @@ import net.eitan.mccourse.block.custom.SoundBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockSetType;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.ButtonBlock;
 import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
+import net.minecraft.block.PressurePlateBlock.ActivationRule;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -71,6 +75,18 @@ public class ModBlocks {
     public static final Block PINK_GARNET_SLAB = registerBlock(
         "pink_garnet_slab",
         new SlabBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
+        Rarity.UNCOMMON
+    );
+
+    public static final Block PINK_GARNET_BUTTON = registerBlock(
+        "pink_garnet_button",
+        new ButtonBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK), BlockSetType.IRON, 10, true),
+        Rarity.UNCOMMON
+    );
+
+    public static final Block PINK_GARNET_PRESSURE_PLATE = registerBlock(
+        "pink_garnet_pressure_plate",
+        new PressurePlateBlock(ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.IRON_BLOCK), BlockSetType.IRON),
         Rarity.UNCOMMON
     );
 

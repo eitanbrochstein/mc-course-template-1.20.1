@@ -34,7 +34,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
             ModBlocks.RAW_PINK_GARNET_BLOCK,
             ModBlocks.DEEPSLATE_PINK_GARNET_ORE,
             ModBlocks.END_STONE_PINK_GARNET_ORE,
-            ModBlocks.NETHER_PINK_GARNET_ORE
+            ModBlocks.NETHER_PINK_GARNET_ORE,
+            ModBlocks.PINK_GARNET_SLAB,
+            ModBlocks.PINK_GARNET_STAIRS,
+            ModBlocks.PINK_GARNET_PRESSURE_PLATE,
+            ModBlocks.PINK_GARNET_BUTTON
         );
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL).add(
@@ -46,7 +50,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL).add(
             ModBlocks.PINK_GARNET_BLOCK,
             ModBlocks.PINK_GARNET_ORE,
-            ModBlocks.DEEPSLATE_PINK_GARNET_ORE
+            ModBlocks.DEEPSLATE_PINK_GARNET_ORE,
+            ModBlocks.PINK_GARNET_SLAB,
+            ModBlocks.PINK_GARNET_STAIRS
         );
     }
 }

@@ -3,6 +3,8 @@
   "values": [
     "mc-course:pink_garnet_block",
     "mc-course:pink_garnet_ore",
-    "mc-course:deepslate_pink_garnet_ore"
+    "mc-course:deepslate_pink_garnet_ore",
+    "mc-course:pink_garnet_slab",
+    "mc-course:pink_garnet_stairs"
   ]
 }
