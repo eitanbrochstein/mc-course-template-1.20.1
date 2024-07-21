@@ -3,6 +3,7 @@ package net.eitan.mccourse.item;
 import net.eitan.mccourse.McCourse;
 import net.eitan.mccourse.block.ModBlocks;
 import net.eitan.mccourse.item.custom.MetalDetectorItem;
+import net.eitan.mccourse.item.custom.ModPosionSword;
 import net.eitan.mccourse.item.custom.PaxelItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
@@ -40,7 +41,7 @@ public class ModItems {
     );
 
     public static final Item PINK_GARNET_SWORD = registerItem("pink_garnet_sword",
-        new SwordItem(ModToolMaterial.PINK_GARNET, 7, 20f, new FabricItemSettings())
+        new ModPosionSword(ModToolMaterial.PINK_GARNET, 7, 20f, new FabricItemSettings())
     );
 
     public static final Item PINK_GARNET_PICKAXE = registerItem("pink_garnet_pickaxe",
