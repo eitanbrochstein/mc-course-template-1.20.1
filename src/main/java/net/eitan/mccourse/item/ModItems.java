@@ -56,7 +56,7 @@ public class ModItems {
     );
 
     public static final Item PINK_GARNET_HOE = registerItem("pink_garnet_hoe",
-        new HoeItem(ModToolMaterial.PINK_GARNET, -5, 10f, new FabricItemSettings())
+        new HoeItem(ModToolMaterial.PINK_GARNET, -5, 100f, new FabricItemSettings())
     );
 
     public static final Item PINK_GARNET_PAXEL = registerItem("pink_garnet_paxel",
