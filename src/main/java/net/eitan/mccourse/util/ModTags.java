@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> METAL_DETECTOR_DETECTABLE_BLOCKS = createBlockTag("metal_detector_detectable_blocks");
+        public static final TagKey<Block> PAXEL_MINEABLE = createBlockTag("mineable/paxel");
 
         public static TagKey<Block> createBlockTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, new Identifier(McCourse.MOD_ID, name));

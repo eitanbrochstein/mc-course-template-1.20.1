@@ -3,6 +3,7 @@ package net.eitan.mccourse.item;
 import net.eitan.mccourse.McCourse;
 import net.eitan.mccourse.block.ModBlocks;
 import net.eitan.mccourse.item.custom.MetalDetectorItem;
+import net.eitan.mccourse.item.custom.PaxelItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -56,6 +57,10 @@ public class ModItems {
 
     public static final Item PINK_GARNET_HOE = registerItem("pink_garnet_hoe",
         new HoeItem(ModToolMaterial.PINK_GARNET, -5, 10f, new FabricItemSettings())
+    );
+
+    public static final Item PINK_GARNET_PAXEL = registerItem("pink_garnet_paxel",
+        new PaxelItem(ModToolMaterial.PINK_GARNET, -5, 10f, new FabricItemSettings())
     );
 
     // Register a new item with a name, and the object item, the registries give the type to the Item

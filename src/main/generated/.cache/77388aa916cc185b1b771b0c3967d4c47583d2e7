@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-18T19:05:30.3341626	Mc Course/Model Definitions
+// 1.20.1	2024-07-20T20:48:09.4864933	Mc Course/Model Definitions
 82ca12b3c59f58e6f31e5629ed3afa123327b14a assets\mc-course\models\block\deepslate_pink_garnet_ore.json
 07aa93a055df80fd13acfba9d81ac568ff14aa2d assets\mc-course\models\item\pink_garnet_trapdoor.json
 183b441f768caa0162347e0c969eabfba2e2031e assets\mc-course\models\block\pink_garnet_stairs.json
@@ -41,6 +41,7 @@ d1a2420fb8c66ad499390ce12f8d1824ea484c6e assets\mc-course\models\item\pink_garne
 b6a10e7c4a8b7e515e9507ed033d244a9978c864 assets\mc-course\models\block\pink_garnet_button_inventory.json
 772d698bc70bcc66a3fa1072412626c9db64065a assets\mc-course\models\block\pink_garnet_wall_post.json
 9b7923253fdb06e61f7a86e275e3d6bf45c484ec assets\mc-course\models\item\peat_brick.json
+12a4eab2d7d8e984ef30393cbf0230c8edb85b09 assets\mc-course\models\item\pink_garnet_paxel.json
 08a14f82437a65744cb4e2e2fef15a299be05b56 assets\mc-course\blockstates\pink_garnet_pressure_plate.json
 1e13a9e9e32586df506768b595603a111e953bed assets\mc-course\blockstates\pink_garnet_stairs.json
 780f2d75aabe79fc7432e9f7534c7f41dcead963 assets\mc-course\blockstates\deepslate_pink_garnet_ore.json
@@ -53,19 +54,19 @@ bdd027d542b95d12ee72d394f0f470551214f460 assets\mc-course\models\item\raw_pink_g
 8ea93ae9b637465f1190128614e26c874760abb1 assets\mc-course\blockstates\end_stone_pink_garnet_ore.json
 f0dd899f18e41c36a319bdae913a38293ab2a3e5 assets\mc-course\models\item\pink_garnet_block.json
 ddcdc73df3964d9adcbf4dbf97bcb9a5bbce019c assets\mc-course\models\block\pink_garnet_block.json
-61bf6e4554f3353e2ce20a726d785e57beae99cf assets\mc-course\blockstates\pink_garnet_block.json
 389ff1c35fe430ba2c1c2e4b26e2b7078c846bf6 assets\mc-course\models\item\pink_garnet_hoe.json
+61bf6e4554f3353e2ce20a726d785e57beae99cf assets\mc-course\blockstates\pink_garnet_block.json
 b092c61a213061fad2708a6425122147cde419a3 assets\mc-course\blockstates\pink_garnet_slab.json
 7dce37cefa1c616455869c3bdfa1f8c0c99f8362 assets\mc-course\models\item\cauliflower.json
 a364c4505aa491e5dac7534ef16984446e66ca6f assets\mc-course\models\item\pink_garnet.json
 631ba0e70a3e4140fed4c74fe7db878eea3e097e assets\mc-course\models\item\pink_garnet_pickaxe.json
 4dce4d71e42e569024e438f1691cf5e7b3c94b65 assets\mc-course\models\block\pink_garnet_door_bottom_left.json
 9dfd5c53c62b95b741c9f5559ecd2819368df3ab assets\mc-course\blockstates\pink_garnet_button.json
+02a519edb4ac0c59b60ae9a4714f824860787b48 assets\mc-course\models\item\pink_garnet_sword.json
 45851cbe6094cf0f0e3024ca9a838b4f2723bd11 assets\mc-course\models\block\pink_garnet_trapdoor_bottom.json
 80ecde20ff7812730697786637ef45fe5d25fedd assets\mc-course\models\block\nether_pink_garnet_ore.json
-279342ae746a293ebdaff6c5e954ec1d4507b1ed assets\mc-course\models\item\pink_garnet_wall.json
 7cdd7f3287f9bc083a64b38a81cca389dc2bfc4d assets\mc-course\models\item\nether_pink_garnet_ore.json
-02a519edb4ac0c59b60ae9a4714f824860787b48 assets\mc-course\models\item\pink_garnet_sword.json
+279342ae746a293ebdaff6c5e954ec1d4507b1ed assets\mc-course\models\item\pink_garnet_wall.json
 e0f8daa9c2e20acff4df8bd2ac9d32d28d78d0b3 assets\mc-course\models\block\pink_garnet_pressure_plate.json
 d04ec525a96b65155ebf222c753fa3309ce207d0 assets\mc-course\models\block\pink_garnet_door_bottom_right.json
 30f241e8dc99ff5b80de752f65fde4bf747126a4 assets\mc-course\blockstates\raw_pink_garnet_block.json
@@ -78,5 +79,5 @@ a7419a05d083f2fc308b9aac0c8343e983c9dd10 assets\mc-course\models\block\pink_garn
 793024a8c222e23c93e8492f5a908d4c896f2d63 assets\mc-course\models\block\pink_garnet_fence_gate_open.json
 088c5cf00e1650f620609c2de69362e73366969d assets\mc-course\models\block\pink_garnet_door_bottom_left_open.json
 c6fa771dca39a3f631843a27ee9116bbccdb106e assets\mc-course\models\block\pink_garnet_door_bottom_right_open.json
-1c85650f5988b68f75cb06f3eabb7ff38effdf37 assets\mc-course\models\item\metal_detector.json
 7fbe1c3300c7d6bf642681b2c7a5c82b63e78daa assets\mc-course\models\block\pink_garnet_door_top_left.json
+1c85650f5988b68f75cb06f3eabb7ff38effdf37 assets\mc-course\models\item\metal_detector.json
