@@ -60,7 +60,7 @@ public class ModItems {
     );
 
     public static final Item PINK_GARNET_PAXEL = registerItem("pink_garnet_paxel",
-        new PaxelItem(ModToolMaterial.PINK_GARNET, -5, 10f, new FabricItemSettings())
+        new PaxelItem(ModToolMaterial.PINK_GARNET, 12, 10f, new FabricItemSettings())
     );
 
     // Register a new item with a name, and the object item, the registries give the type to the Item
