@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.item.ArmorItem;
 
 public class ModModelProvider extends FabricModelProvider {
 
@@ -54,9 +55,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.PINK_GARNET_HOE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PINK_GARNET_PAXEL, Models.HANDHELD);
 
-        itemModelGenerator.register(ModItems.PINK_GARNET_HELMET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PINK_GARNET_CHESTPLATE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PINK_GARNET_LEGGINGS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PINK_GARNET_BOOTS, Models.GENERATED);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.PINK_GARNET_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.PINK_GARNET_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.PINK_GARNET_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.PINK_GARNET_BOOTS);
     }
 }
