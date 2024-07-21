@@ -8,6 +8,7 @@ import net.eitan.mccourse.item.custom.PaxelItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
@@ -62,6 +63,22 @@ public class ModItems {
 
     public static final Item PINK_GARNET_PAXEL = registerItem("pink_garnet_paxel",
         new PaxelItem(ModToolMaterial.PINK_GARNET, 12, 10f, new FabricItemSettings())
+    );
+
+    public static final Item PINK_GARNET_HELMET = registerItem("pink_garnet_helmet",
+        new ArmorItem(ModArmorMaterial.PINK_GARNET, ArmorItem.Type.HELMET, new FabricItemSettings())
+    );
+
+    public static final Item PINK_GARNET_CHESTPLATE = registerItem("pink_garnet_chestplate",
+        new ArmorItem(ModArmorMaterial.PINK_GARNET, ArmorItem.Type.CHESTPLATE, new FabricItemSettings())
+    );
+
+    public static final Item PINK_GARNET_LEGGINGS = registerItem("pink_garnet_leggings",
+        new ArmorItem(ModArmorMaterial.PINK_GARNET, ArmorItem.Type.LEGGINGS, new FabricItemSettings())
+    );
+
+    public static final Item PINK_GARNET_BOOTS = registerItem("pink_garnet_boots",
+        new ArmorItem(ModArmorMaterial.PINK_GARNET, ArmorItem.Type.BOOTS, new FabricItemSettings())
     );
 
     // Register a new item with a name, and the object item, the registries give the type to the Item
