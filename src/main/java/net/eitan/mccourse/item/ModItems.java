@@ -3,6 +3,7 @@ package net.eitan.mccourse.item;
 import net.eitan.mccourse.McCourse;
 import net.eitan.mccourse.block.ModBlocks;
 import net.eitan.mccourse.item.custom.MetalDetectorItem;
+import net.eitan.mccourse.item.custom.ModArmorItem;
 import net.eitan.mccourse.item.custom.ModPosionSword;
 import net.eitan.mccourse.item.custom.PaxelItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -66,19 +67,19 @@ public class ModItems {
     );
 
     public static final Item PINK_GARNET_HELMET = registerItem("pink_garnet_helmet",
-        new ArmorItem(ModArmorMaterial.PINK_GARNET, ArmorItem.Type.HELMET, new FabricItemSettings())
+        new ModArmorItem(ModArmorMaterial.PINK_GARNET, ArmorItem.Type.HELMET, new FabricItemSettings())
     );
 
     public static final Item PINK_GARNET_CHESTPLATE = registerItem("pink_garnet_chestplate",
-        new ArmorItem(ModArmorMaterial.PINK_GARNET, ArmorItem.Type.CHESTPLATE, new FabricItemSettings())
+        new ModArmorItem(ModArmorMaterial.PINK_GARNET, ArmorItem.Type.CHESTPLATE, new FabricItemSettings())
     );
 
     public static final Item PINK_GARNET_LEGGINGS = registerItem("pink_garnet_leggings",
-        new ArmorItem(ModArmorMaterial.PINK_GARNET, ArmorItem.Type.LEGGINGS, new FabricItemSettings())
+        new ModArmorItem(ModArmorMaterial.PINK_GARNET, ArmorItem.Type.LEGGINGS, new FabricItemSettings())
     );
 
     public static final Item PINK_GARNET_BOOTS = registerItem("pink_garnet_boots",
-        new ArmorItem(ModArmorMaterial.PINK_GARNET, ArmorItem.Type.BOOTS, new FabricItemSettings())
+        new ModArmorItem(ModArmorMaterial.PINK_GARNET, ArmorItem.Type.BOOTS, new FabricItemSettings())
     );
 
     // Register a new item with a name, and the object item, the registries give the type to the Item
