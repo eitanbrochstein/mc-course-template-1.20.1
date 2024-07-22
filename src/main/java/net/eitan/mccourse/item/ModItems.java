@@ -12,6 +12,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.HoeItem;
+import net.minecraft.item.HorseArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.PickaxeItem;
@@ -80,6 +81,10 @@ public class ModItems {
 
     public static final Item PINK_GARNET_BOOTS = registerItem("pink_garnet_boots",
         new ModArmorItem(ModArmorMaterial.PINK_GARNET, ArmorItem.Type.BOOTS, new FabricItemSettings())
+    );
+
+    public static final Item PINK_GARNET_HORSE_ARMOR = registerItem("pink_garnet_horse_armor",
+        new HorseArmorItem(14, "pink_garnet", new FabricItemSettings())
     );
 
     // Register a new item with a name, and the object item, the registries give the type to the Item

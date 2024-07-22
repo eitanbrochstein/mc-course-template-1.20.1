@@ -17,7 +17,7 @@ import net.minecraft.world.World;
 public class ModArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT = 
     new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>()
-    .put(ModArmorMaterial.PINK_GARNET, new StatusEffectInstance(StatusEffects.SPEED, 15, 2))
+    .put(ModArmorMaterial.PINK_GARNET, new StatusEffectInstance(StatusEffects.SPEED, 400, 2))
     .build();
 
     public ModArmorItem(ArmorMaterial material, Type type, Settings settings) {
@@ -55,7 +55,7 @@ public class ModArmorItem extends ArmorItem {
 
     private boolean hasCorrectArmorOn(ArmorMaterial armorMaterial, PlayerEntity player) {
         for (ItemStack armorStack : player.getArmorItems()) {
-            if (armorStack.getItem() instanceof ArmorItem) {
+            if (!(armorStack.getItem() instanceof ArmorItem)) {
                 return false;
             }
         }
