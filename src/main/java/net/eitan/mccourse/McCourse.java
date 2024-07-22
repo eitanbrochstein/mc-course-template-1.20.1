@@ -1,6 +1,7 @@
 package net.eitan.mccourse;
 
 import net.eitan.mccourse.block.ModBlocks;
+import net.eitan.mccourse.enchantment.ModEnchantments;
 import net.eitan.mccourse.item.ModItemGroup;
 import net.eitan.mccourse.item.ModItems;
 import net.eitan.mccourse.util.ModRegistries;
@@ -27,5 +28,7 @@ public class McCourse implements ModInitializer {
 		ModBlocks.registerModBlocks();
 
 		ModRegistries.registerModStuffs();
+
+		ModEnchantments.regiserModEnchantments();
 	}
 }

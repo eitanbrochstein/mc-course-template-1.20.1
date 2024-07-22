@@ -84,7 +84,7 @@ public class ModItems {
     );
 
     public static final Item PINK_GARNET_HORSE_ARMOR = registerItem("pink_garnet_horse_armor",
-        new HorseArmorItem(14, "pink_garnet", new FabricItemSettings())
+        new HorseArmorItem(100, "pink_garnet", new FabricItemSettings())
     );
 
     // Register a new item with a name, and the object item, the registries give the type to the Item
