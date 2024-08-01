@@ -31,6 +31,7 @@ public class ModItemGroup {
                         entries.add(ModItems.CAULIFLOWER);
                         entries.add(ModItems.PEAT_BRICK);
                         entries.add(ModBlocks.PINK_GARNET_LAMP_BLOCK);
+                        entries.add(ModItems.PINK_GARNET_TABLET);
 
                         entries.add(ModBlocks.PINK_GARNET_BLOCK);
                         entries.add(ModBlocks.RAW_PINK_GARNET_BLOCK);

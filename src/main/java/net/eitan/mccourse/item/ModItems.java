@@ -2,6 +2,7 @@ package net.eitan.mccourse.item;
 
 import net.eitan.mccourse.McCourse;
 import net.eitan.mccourse.block.ModBlocks;
+import net.eitan.mccourse.item.custom.DataTabletItem;
 import net.eitan.mccourse.item.custom.MetalDetectorItem;
 import net.eitan.mccourse.item.custom.ModArmorItem;
 import net.eitan.mccourse.item.custom.ModPosionSword;
@@ -85,6 +86,10 @@ public class ModItems {
 
     public static final Item PINK_GARNET_HORSE_ARMOR = registerItem("pink_garnet_horse_armor",
         new HorseArmorItem(100, "pink_garnet", new FabricItemSettings())
+    );
+
+    public static final Item PINK_GARNET_TABLET = registerItem("pink_garnet_tablet",
+        new DataTabletItem(new FabricItemSettings().maxCount(1))
     );
 
     // Register a new item with a name, and the object item, the registries give the type to the Item

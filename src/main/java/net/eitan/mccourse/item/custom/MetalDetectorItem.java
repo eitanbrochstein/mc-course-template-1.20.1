@@ -2,6 +2,8 @@ package net.eitan.mccourse.item.custom;
 
 import java.util.List;
 
+import net.eitan.mccourse.item.ModItems;
+import net.eitan.mccourse.util.InventoryUtil;
 import net.eitan.mccourse.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -12,6 +14,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
@@ -41,6 +44,10 @@ public class MetalDetectorItem extends Item {
                     outputValueableCoordinates(positionClicked.down(i), player, block);
                     foundBlock = true;
 
+                    if (InventoryUtil.hasPlayerStackInInventory(player, ModItems.PINK_GARNET_TABLET)) {
+                        addNbtDataToTablet(player, positionClicked.down(i), block);
+                    }
+
                     break;
                 }
             }
@@ -52,6 +59,15 @@ public class MetalDetectorItem extends Item {
         context.getStack().damage(1, context.getPlayer(), playerEntity -> playerEntity.sendToolBreakStatus(playerEntity.getActiveHand()));
 
         return ActionResult.SUCCESS;
+    }
+
+    private void addNbtDataToTablet(PlayerEntity player, BlockPos position, Block block) {
+        ItemStack dataTabletStack = player.getInventory().getStack(InventoryUtil.getFirstInventoryIndex(player, ModItems.PINK_GARNET_TABLET));
+        
+        NbtCompound nbtData = new NbtCompound();
+        nbtData.putString("mc-course.last_valuable_found", block.getName().getString() + " at (" + position.getX() + ", " + position.getY() + ", " + position.getZ() + ")");
+
+        dataTabletStack.setNbt(nbtData);
     }
 
     private void outputValueableCoordinates(BlockPos position, PlayerEntity player, Block block) {

@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-31T20:54:53.3048508	Mc Course/Model Definitions
+// 1.20.1	2024-07-31T22:17:37.9293356	Mc Course/Model Definitions
 183b441f768caa0162347e0c969eabfba2e2031e assets\mc-course\models\block\pink_garnet_stairs.json
 07aa93a055df80fd13acfba9d81ac568ff14aa2d assets\mc-course\models\item\pink_garnet_trapdoor.json
 15da0ddd8c0eb7bd57b893ee4eb13711079b0d42 assets\mc-course\models\item\pink_garnet_leggings_emerald_trim.json
@@ -26,6 +26,7 @@ f65cc880c27006b22bd90f60774e5cdbc20c8fab assets\mc-course\models\block\pink_garn
 2e7aa5c880898e515bd793e42474406bddd995f4 assets\mc-course\models\block\pink_garnet_fence_gate.json
 47da363e402e68f218e0003d699ce8382a9f5681 assets\mc-course\models\item\pink_garnet_chestplate_lapis_trim.json
 fd6e258e6e55efdac6ade8e9771e8def209f050a assets\mc-course\models\item\pink_garnet_shovel.json
+064e3b77f97d9e1e6457af17ef12f6f13bc95719 assets\mc-course\models\item\pink_garnet_tablet.json
 766f05da1197f7ec7de610a9c7472cf2c779eb6f assets\mc-course\models\item\pink_garnet_leggings_amethyst_trim.json
 1a2b3fd6610aa228deddc539256767715c074a3c assets\mc-course\blockstates\pink_garnet_fence_gate.json
 87c0da8d24c353ad5a1faaf75e4e6c26e47aeea5 assets\mc-course\models\item\pink_garnet_boots_iron_trim.json

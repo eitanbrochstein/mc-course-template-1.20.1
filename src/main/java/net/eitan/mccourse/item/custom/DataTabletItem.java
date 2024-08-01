@@ -1,0 +1,44 @@
+package net.eitan.mccourse.item.custom;
+
+import java.util.List;
+
+import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.text.Text;
+import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
+import net.minecraft.world.World;
+
+public class DataTabletItem extends Item {
+
+    public DataTabletItem(Settings settings) {
+        super(settings);
+    }
+
+    @Override
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        ItemStack stack = user.getStackInHand(hand);
+
+        if (stack.hasNbt()) {
+            stack.setNbt(new NbtCompound());
+        }
+        return super.use(world, user, hand);
+    }
+
+    @Override
+    public boolean hasGlint(ItemStack stack) {
+        return stack.hasNbt();
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
+        if (stack.hasNbt()) {
+            String currentFoundValuable = stack.getNbt().getString("mc-course.last_valuable_found");
+            tooltip.add(Text.literal(currentFoundValuable));
+        }
+        super.appendTooltip(stack, world, tooltip, context);
+    }
+}
