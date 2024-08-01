@@ -44,7 +44,7 @@ public class MetalDetectorItem extends Item {
                     outputValueableCoordinates(positionClicked.down(i), player, block);
                     foundBlock = true;
 
-                    if (InventoryUtil.hasPlayerStackInInventory(player, ModItems.PINK_GARNET_TABLET)) {
+                    if (InventoryUtil.hasPlayerStackInInventory(player, ModItems.DATA_TABLET)) {
                         addNbtDataToTablet(player, positionClicked.down(i), block);
                     }
 
@@ -62,7 +62,7 @@ public class MetalDetectorItem extends Item {
     }
 
     private void addNbtDataToTablet(PlayerEntity player, BlockPos position, Block block) {
-        ItemStack dataTabletStack = player.getInventory().getStack(InventoryUtil.getFirstInventoryIndex(player, ModItems.PINK_GARNET_TABLET));
+        ItemStack dataTabletStack = player.getInventory().getStack(InventoryUtil.getFirstInventoryIndex(player, ModItems.DATA_TABLET));
         
         NbtCompound nbtData = new NbtCompound();
         nbtData.putString("mc-course.last_valuable_found", block.getName().getString() + " at (" + position.getX() + ", " + position.getY() + ", " + position.getZ() + ")");

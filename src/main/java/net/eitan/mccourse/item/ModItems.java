@@ -88,7 +88,7 @@ public class ModItems {
         new HorseArmorItem(100, "pink_garnet", new FabricItemSettings())
     );
 
-    public static final Item PINK_GARNET_TABLET = registerItem("pink_garnet_tablet",
+    public static final Item DATA_TABLET = registerItem("data_tablet",
         new DataTabletItem(new FabricItemSettings().maxCount(1))
     );
 
