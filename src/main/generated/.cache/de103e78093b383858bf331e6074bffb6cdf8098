@@ -1,4 +1,4 @@
-// 1.20.1	2024-08-01T13:41:05.3724316	Mc Course/Recipes
+// 1.20.1	2024-08-01T15:01:34.6232216	Mc Course/Recipes
 08485b105ccd226b70dd694dba0c40e099359505 data\mc-course\recipes\pink_garnet_block.json
 4572745601eff6f345b9a3c6073d69f798171954 data\mc-course\recipes\pink_garnet_from_blasting_nether_pink_garnet_ore.json
 8533f2d178f230af143d272218e0ed8301da4643 data\mc-course\advancements\recipes\misc\pink_garnet_block_.json
@@ -21,8 +21,8 @@ d07d2c9e00610b171ab8750cedb9038bc9ff20bf data\mc-course\recipes\pink_garnet_from
 34a4f654d87b605fd6a588ba57c6468735366edd data\mc-course\advancements\recipes\misc\pink_garnet_from_smelting_nether_pink_garnet_ore.json
 5d162973001604c556c4adef541b8776ba8d359a data\mc-course\recipes\pink_garnet_from_smelting_raw_pink_garnet.json
 595825105fd323e35e69cc83fac6c13b160e7419 data\mc-course\recipes\pink_garnet_from_blasting_deepslate_pink_garnet_ore.json
-3c4cf7ae6f4780d30c611ad0ee92c09c185e3a83 data\mc-course\recipes\pink_garnet_from_blasting_raw_pink_garnet.json
 356d4fb0c6cd0330adc253fe3c9b0d548ac4411a data\mc-course\advancements\recipes\misc\pink_garnet_from_blasting_raw_pink_garnet.json
+3c4cf7ae6f4780d30c611ad0ee92c09c185e3a83 data\mc-course\recipes\pink_garnet_from_blasting_raw_pink_garnet.json
 e23964dbbd76e3203bce12968b409b64e0aaf88e data\mc-course\advancements\recipes\misc\raw_pink_garnet.json
 1964651d32eb3e8699ffd2d0c817bedab589d9f8 data\mc-course\advancements\recipes\misc\pink_garnet_from_smelting_raw_pink_garnet.json
 b1d88d0774c648a6b6d4ddb86236f7b97c091c1f data\mc-course\advancements\recipes\misc\pink_garnet_from_smelting_deepslate_pink_garnet_ore.json

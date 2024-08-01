@@ -1,9 +1,12 @@
 package net.eitan.mccourse.datagen;
 
 import net.eitan.mccourse.block.ModBlocks;
+import net.eitan.mccourse.block.custom.CauliflowerCropBlock;
 import net.eitan.mccourse.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
+import net.minecraft.predicate.StatePredicate;
 
 public class ModLootGenerator extends FabricBlockLootTableProvider {
 
@@ -30,5 +33,9 @@ public class ModLootGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DEEPSLATE_PINK_GARNET_ORE, oreDrops(ModBlocks.DEEPSLATE_PINK_GARNET_ORE, ModItems.RAW_PINK_GARNET));
         addDrop(ModBlocks.NETHER_PINK_GARNET_ORE, oreDrops(ModBlocks.NETHER_PINK_GARNET_ORE, ModItems.RAW_PINK_GARNET));
         addDrop(ModBlocks.END_STONE_PINK_GARNET_ORE, oreDrops(ModBlocks.END_STONE_PINK_GARNET_ORE, ModItems.RAW_PINK_GARNET));
+
+        BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.CAULIFLOWER_CROP)
+                .properties(StatePredicate.Builder.create().exactMatch(CauliflowerCropBlock.AGE, 6));
+        this.addDrop(ModBlocks.CAULIFLOWER_CROP, this.cropDrops(ModBlocks.CAULIFLOWER_CROP, ModItems.CAULIFLOWER, ModItems.CAULIFLOWER_SEEDS, builder2));
     }
 }

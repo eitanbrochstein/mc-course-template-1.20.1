@@ -10,6 +10,7 @@ import net.eitan.mccourse.item.custom.PaxelItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.HoeItem;
@@ -90,6 +91,10 @@ public class ModItems {
 
     public static final Item DATA_TABLET = registerItem("data_tablet",
         new DataTabletItem(new FabricItemSettings().maxCount(1))
+    );
+
+    public static final Item CAULIFLOWER_SEEDS = registerItem("cauliflower_seeds",
+        new AliasedBlockItem(ModBlocks.CAULIFLOWER_CROP, new FabricItemSettings())
     );
 
     // Register a new item with a name, and the object item, the registries give the type to the Item

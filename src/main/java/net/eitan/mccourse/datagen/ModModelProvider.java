@@ -1,6 +1,7 @@
 package net.eitan.mccourse.datagen;
 
 import net.eitan.mccourse.block.ModBlocks;
+import net.eitan.mccourse.block.custom.CauliflowerCropBlock;
 import net.eitan.mccourse.block.custom.PinkGarnetLampBlock;
 import net.eitan.mccourse.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -44,7 +45,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTrapdoor(ModBlocks.PINK_GARNET_TRAPDOOR);
 
         registerRedstoneLamp(blockStateModelGenerator);
-
+        blockStateModelGenerator.registerCrop(ModBlocks.CAULIFLOWER_CROP, CauliflowerCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6);
     }
 
     private void registerRedstoneLamp(BlockStateModelGenerator blockStateModelGenerator) {

@@ -1,6 +1,7 @@
 package net.eitan.mccourse.block;
 
 import net.eitan.mccourse.McCourse;
+import net.eitan.mccourse.block.custom.CauliflowerCropBlock;
 import net.eitan.mccourse.block.custom.PinkGarnetLampBlock;
 import net.eitan.mccourse.block.custom.SoundBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -9,6 +10,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockSetType;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ButtonBlock;
+import net.minecraft.block.CropBlock;
 import net.minecraft.block.DoorBlock;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.block.FenceBlock;
@@ -135,7 +137,18 @@ public class ModBlocks {
         .strength(4f).requiresTool().luminance(state -> state.get(PinkGarnetLampBlock.CLICKED) ? 15: 0)),
         Rarity.UNCOMMON
     );
+
+    public static final Block CAULIFLOWER_CROP = registerBlockWithoutBlockItem(
+        "cauliflower_crop",
+        new CauliflowerCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)),
+        Rarity.EPIC
+    );
     
+    private static Block registerBlockWithoutBlockItem(String name, Block block, Rarity rarity) {
+        // minecraft type, name with mod id, block itself
+        return Registry.register(Registries.BLOCK, new Identifier(McCourse.MOD_ID, name), block);
+    }
+
     private static Block registerBlock(String name, Block block, Rarity rarity) {
         registerBlockItem(name, block, rarity);
         // minecraft type, name with mod id, block itself
