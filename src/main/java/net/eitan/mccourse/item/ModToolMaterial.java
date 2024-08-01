@@ -7,7 +7,7 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
-    PINK_GARNET(5, 2701, 11.0f, 7.0f, 20, () -> Ingredient.ofItems(ModItems.PINK_GARNET));
+    PINK_GARNET(5, 2701, 11.0f, 7.0f, 30, () -> Ingredient.ofItems(ModItems.PINK_GARNET));
 
     private final int miningLevel;
     private final int itemDurability;

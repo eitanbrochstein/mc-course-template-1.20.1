@@ -1,6 +1,7 @@
 package net.eitan.mccourse.block;
 
 import net.eitan.mccourse.McCourse;
+import net.eitan.mccourse.block.custom.PinkGarnetLampBlock;
 import net.eitan.mccourse.block.custom.SoundBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -12,6 +13,7 @@ import net.minecraft.block.DoorBlock;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.block.FenceBlock;
 import net.minecraft.block.FenceGateBlock;
+import net.minecraft.block.MapColor;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
@@ -19,6 +21,7 @@ import net.minecraft.block.TrapdoorBlock;
 import net.minecraft.block.WallBlock;
 import net.minecraft.block.WoodType;
 import net.minecraft.block.PressurePlateBlock.ActivationRule;
+import net.minecraft.block.enums.Instrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -123,6 +126,13 @@ public class ModBlocks {
     public static final Block PINK_GARNET_TRAPDOOR = registerBlock(
         "pink_garnet_trapdoor",
         new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK), BlockSetType.IRON),
+        Rarity.UNCOMMON
+    );
+
+    public static final Block PINK_GARNET_LAMP_BLOCK = registerBlock(
+        "pink_garnet_lamp_block",
+        new PinkGarnetLampBlock(FabricBlockSettings.create().mapColor(MapColor.RAW_IRON_PINK).instrument(Instrument.BASEDRUM)
+        .strength(4f).requiresTool().luminance(state -> state.get(PinkGarnetLampBlock.CLICKED) ? 15: 0)),
         Rarity.UNCOMMON
     );
     
