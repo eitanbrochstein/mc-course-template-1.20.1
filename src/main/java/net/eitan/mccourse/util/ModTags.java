@@ -19,6 +19,7 @@ public class ModTags {
         public static TagKey<Block> createCommonBlockTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, new Identifier("c", name));
         }
+
     }
 
     public static class Items {
