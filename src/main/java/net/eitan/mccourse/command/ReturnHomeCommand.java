@@ -3,6 +3,7 @@ package net.eitan.mccourse.command;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
+import net.eitan.mccourse.McCourse;
 import net.eitan.mccourse.util.IEntityDataSaver;
 import net.minecraft.command.CommandRegistryAccess;
 import net.minecraft.server.command.CommandManager;
@@ -18,7 +19,7 @@ public class ReturnHomeCommand {
     }
 
     private static int run(CommandContext<ServerCommandSource> context) throws CommandSyntaxException {
-        IEntityDataSaver player = (IEntityDataSaver)context.getSource().getPlayer();
+        IEntityDataSaver player = (IEntityDataSaver) context.getSource().getPlayer();
 
         int[] homepos = player.getPersistentData().getIntArray("homepos");
 
