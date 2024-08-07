@@ -22,5 +22,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
             ModItems.PINK_GARNET_LEGGINGS,
             ModItems.PINK_GARNET_BOOTS
         );
+
+        getOrCreateTagBuilder(ItemTags.MUSIC_DISCS).add(
+                ModItems.BAR_BRAWL_MUSIC_DISC,
+                ModItems.RICKROLL_MUSIC_DISC
+        );
     }
 }

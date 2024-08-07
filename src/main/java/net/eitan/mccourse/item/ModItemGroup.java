@@ -58,6 +58,9 @@ public class ModItemGroup {
                         entries.add(ModItems.PINK_GARNET_AXE);
                         entries.add(ModItems.PINK_GARNET_SHOVEL);
                         entries.add(ModItems.PINK_GARNET_HOE);
+
+                        entries.add(ModItems.RICKROLL_MUSIC_DISC);
+                        entries.add(ModItems.BAR_BRAWL_MUSIC_DISC);
                     }).build()
     );
 

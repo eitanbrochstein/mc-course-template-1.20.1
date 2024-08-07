@@ -39,5 +39,21 @@
         "sounds": [
             "mc-course:pink_garnet_lamp_fall"
         ]
+    },
+    "bar_brawl": {
+        "sounds": [
+            {
+                "name": "mc-course:bar_brawl",
+                "stream": true
+            }
+        ]
+    },
+    "rickroll_music_disc": {
+        "sounds": [
+            {
+                "name": "mc-course:rickroll",
+                "stream": true
+            }
+        ]
     }
 }

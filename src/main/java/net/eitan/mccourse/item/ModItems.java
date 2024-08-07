@@ -7,19 +7,11 @@ import net.eitan.mccourse.item.custom.MetalDetectorItem;
 import net.eitan.mccourse.item.custom.ModArmorItem;
 import net.eitan.mccourse.item.custom.ModPosionSword;
 import net.eitan.mccourse.item.custom.PaxelItem;
+import net.eitan.mccourse.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.AliasedBlockItem;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.AxeItem;
-import net.minecraft.item.HoeItem;
-import net.minecraft.item.HorseArmorItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.item.SwordItem;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -95,6 +87,14 @@ public class ModItems {
 
     public static final Item CAULIFLOWER_SEEDS = registerItem("cauliflower_seeds",
         new AliasedBlockItem(ModBlocks.CAULIFLOWER_CROP, new FabricItemSettings())
+    );
+
+    public static final Item BAR_BRAWL_MUSIC_DISC = registerItem("bar_brawl_music_disc",
+        new MusicDiscItem(9, ModSounds.BAR_BRAWL, new FabricItemSettings().maxCount(1), 122)
+    );
+
+    public static final Item RICKROLL_MUSIC_DISC = registerItem("rickroll_music_disc",
+        new MusicDiscItem(9, ModSounds.RICKROLL, new FabricItemSettings().maxCount(1), 212)
     );
 
     // Register a new item with a name, and the object item, the registries give the type to the Item
