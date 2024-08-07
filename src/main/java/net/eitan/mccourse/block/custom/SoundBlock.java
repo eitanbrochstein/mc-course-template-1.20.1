@@ -2,7 +2,7 @@ package net.eitan.mccourse.block.custom;
 
 import java.util.List;
 
-import net.eitan.mccourse.McCourse;
+import net.eitan.mccourse.sound.ModSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.Screen;
@@ -28,7 +28,7 @@ public class SoundBlock extends Block {
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (player.isSneaking()) {
-            world.playSound(player, pos, McCourse.RICKROLL, SoundCategory.BLOCKS, 1f, 1f);
+            world.playSound(null, pos, ModSounds.RICKROLL, SoundCategory.BLOCKS, 1f, 1f);
             return ActionResult.SUCCESS;
         } else {
             world.playSound(player, pos, SoundEvents.BLOCK_NOTE_BLOCK_COW_BELL.value(), SoundCategory.BLOCKS, 1f, 1f);

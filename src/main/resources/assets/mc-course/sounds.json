@@ -3,5 +3,11 @@
         "sounds": [
             "mc-course:rickroll"
         ]
+    },
+    "metal_detector_found_ore": {
+        "subtitle": "sound.mc-course.metal_detector_found_ore",
+        "sounds": [
+            "mc-course:metal_detector_found_ore"
+        ]
     }
 }

@@ -131,9 +131,9 @@ public class ModBlocks {
         Rarity.EPIC
     );
 
-    public static final Block PETUNIA = registerBlockWithoutBlockItem(
+    public static final Block PETUNIA = registerBlock(
             "petunia",
-            new FlowerBlock(StatusEffects.BAD_OMEN, 15, FabricBlockSettings.copyOf(Blocks.ALLIUM)),
+            new FlowerBlock(StatusEffects.BAD_OMEN, 4, FabricBlockSettings.copyOf(Blocks.ALLIUM)),
             Rarity.EPIC
     );
 
