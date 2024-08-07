@@ -6,24 +6,11 @@ import net.eitan.mccourse.block.custom.PinkGarnetLampBlock;
 import net.eitan.mccourse.block.custom.SoundBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockSetType;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.ButtonBlock;
-import net.minecraft.block.CropBlock;
-import net.minecraft.block.DoorBlock;
-import net.minecraft.block.ExperienceDroppingBlock;
-import net.minecraft.block.FenceBlock;
-import net.minecraft.block.FenceGateBlock;
-import net.minecraft.block.MapColor;
-import net.minecraft.block.PressurePlateBlock;
-import net.minecraft.block.SlabBlock;
-import net.minecraft.block.StairsBlock;
-import net.minecraft.block.TrapdoorBlock;
-import net.minecraft.block.WallBlock;
-import net.minecraft.block.WoodType;
+import net.minecraft.block.*;
 import net.minecraft.block.PressurePlateBlock.ActivationRule;
 import net.minecraft.block.enums.Instrument;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -142,6 +129,18 @@ public class ModBlocks {
         "cauliflower_crop",
         new CauliflowerCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)),
         Rarity.EPIC
+    );
+
+    public static final Block PETUNIA = registerBlockWithoutBlockItem(
+            "petunia",
+            new FlowerBlock(StatusEffects.BAD_OMEN, 15, FabricBlockSettings.copyOf(Blocks.ALLIUM)),
+            Rarity.EPIC
+    );
+
+    public static final Block POTTED_PETUNIA = registerBlockWithoutBlockItem(
+            "potted_petunia",
+            new FlowerPotBlock(PETUNIA, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM)),
+            Rarity.EPIC
     );
     
     private static Block registerBlockWithoutBlockItem(String name, Block block, Rarity rarity) {
