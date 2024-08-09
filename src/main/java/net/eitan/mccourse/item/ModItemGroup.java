@@ -33,6 +33,8 @@ public class ModItemGroup {
                         entries.add(ModBlocks.PINK_GARNET_LAMP_BLOCK);
                         entries.add(ModItems.DATA_TABLET);
                         entries.add(ModItems.CAULIFLOWER_SEEDS);
+                        entries.add(ModItems.RADIATION_STAFF);
+                        entries.add(ModItems.PINK_GARNET_BOW);
 
                         entries.add(ModBlocks.PINK_GARNET_BLOCK);
                         entries.add(ModBlocks.RAW_PINK_GARNET_BLOCK);
@@ -52,6 +54,7 @@ public class ModItemGroup {
                         entries.add(ModBlocks.PINK_GARNET_DOOR);
                         entries.add(ModBlocks.PINK_GARNET_TRAPDOOR);
                         entries.add(ModBlocks.PETUNIA);
+                        entries.add(ModBlocks.GEM_EMPOWERING_STATION);
 
                         entries.add(ModItems.PINK_GARNET_SWORD);
                         entries.add(ModItems.PINK_GARNET_PICKAXE);

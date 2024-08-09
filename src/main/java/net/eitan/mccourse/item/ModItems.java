@@ -97,6 +97,12 @@ public class ModItems {
         new MusicDiscItem(9, ModSounds.RICKROLL, new FabricItemSettings().maxCount(1), 212)
     );
 
+    public static final Item RADIATION_STAFF = registerItem("radiation_staff",
+            new Item(new FabricItemSettings().maxCount(1)));
+
+    public static final Item PINK_GARNET_BOW = registerItem("pink_garnet_bow",
+            new BowItem(new FabricItemSettings().maxCount(1).maxDamage(500)));
+
     // Register a new item with a name, and the object item, the registries give the type to the Item
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(McCourse.MOD_ID, name), item);

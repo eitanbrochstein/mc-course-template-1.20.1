@@ -2,6 +2,7 @@ package net.eitan.mccourse.block;
 
 import net.eitan.mccourse.McCourse;
 import net.eitan.mccourse.block.custom.CauliflowerCropBlock;
+import net.eitan.mccourse.block.custom.GemEmpoweringStationBlock;
 import net.eitan.mccourse.block.custom.PinkGarnetLampBlock;
 import net.eitan.mccourse.block.custom.SoundBlock;
 import net.eitan.mccourse.sound.ModSounds;
@@ -143,6 +144,9 @@ public class ModBlocks {
             new FlowerPotBlock(PETUNIA, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM)),
             Rarity.EPIC
     );
+
+    public static final Block GEM_EMPOWERING_STATION = registerBlock("gem_empowering_station",
+            new GemEmpoweringStationBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()), Rarity.EPIC);
     
     private static Block registerBlockWithoutBlockItem(String name, Block block, Rarity rarity) {
         // minecraft type, name with mod id, block itself

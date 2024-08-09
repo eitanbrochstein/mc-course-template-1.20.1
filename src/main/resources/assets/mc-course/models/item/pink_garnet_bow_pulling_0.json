@@ -1,0 +1,6 @@
+{
+  "parent": "mc-course:item/pink_garnet_bow",
+  "textures": {
+    "layer0": "mc-course:item/pink_garnet_bow_pulling_0"
+  }
+}
