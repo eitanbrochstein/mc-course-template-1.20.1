@@ -98,7 +98,7 @@ public class ModItems {
     );
 
     public static final Item PINK_GARNET_SHIELD = registerItem("pink_garnet_shield",
-            new ShieldItem(new FabricItemSettings().maxCount(1))
+            new ShieldItem(new FabricItemSettings().maxCount(1).maxDamage(500))
     );
 
 
