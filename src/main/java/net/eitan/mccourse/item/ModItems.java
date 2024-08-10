@@ -97,6 +97,11 @@ public class ModItems {
         new MusicDiscItem(9, ModSounds.RICKROLL, new FabricItemSettings().maxCount(1), 212)
     );
 
+    public static final Item PINK_GARNET_SHIELD = registerItem("pink_garnet_shield",
+            new ShieldItem(new FabricItemSettings().maxCount(1))
+    );
+
+
     public static final Item RADIATION_STAFF = registerItem("radiation_staff",
             new Item(new FabricItemSettings().maxCount(1)));
 

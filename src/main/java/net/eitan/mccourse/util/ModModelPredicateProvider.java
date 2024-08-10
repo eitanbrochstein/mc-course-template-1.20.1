@@ -11,6 +11,7 @@ public class ModModelPredicateProvider {
     public static void registerModModels() {
         ModelPredicateProviderRegistry.register(ModItems.DATA_TABLET, new Identifier(McCourse.MOD_ID, "on"), (stack, world, entity, set) -> stack.hasNbt() ? 1f: 0f);
         registerBow(ModItems.PINK_GARNET_BOW);
+        registerShield(ModItems.PINK_GARNET_SHIELD);
     }
 
     private static void registerBow(Item bow) {
@@ -24,5 +25,9 @@ public class ModModelPredicateProvider {
             return (float)(stack.getMaxUseTime() - entity.getItemUseTimeLeft()) / 20.0f;
         });
         ModelPredicateProviderRegistry.register(bow, new Identifier("pulling"), (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);
+    }
+
+    private static void registerShield(Item shield) {
+        ModelPredicateProviderRegistry.register(shield, new Identifier("blocking"), (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);
     }
 }
