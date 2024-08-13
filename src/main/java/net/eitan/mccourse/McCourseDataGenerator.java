@@ -1,10 +1,6 @@
 package net.eitan.mccourse;
 
-import net.eitan.mccourse.datagen.ModBlockTagProvider;
-import net.eitan.mccourse.datagen.ModItemTagProvider;
-import net.eitan.mccourse.datagen.ModLootGenerator;
-import net.eitan.mccourse.datagen.ModModelProvider;
-import net.eitan.mccourse.datagen.ModRecipeGenerator;
+import net.eitan.mccourse.datagen.*;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
@@ -18,5 +14,6 @@ public class McCourseDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModLootGenerator::new);
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeGenerator::new);
+		pack.addProvider(ModPaintingVariantTagProvider::new);
 	}
 }

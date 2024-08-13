@@ -61,5 +61,11 @@
 
   "enchantment.mc-course.lightning_striker": "Lightning Striker",
 
-  "sounds.mc-course.metal_detector_found_ore": "Metal Detector Found An Ore!"
+  "sounds.mc-course.metal_detector_found_ore": "Metal Detector Found An Ore!",
+  "painting.mc-course.world.title": "World",
+  "painting.mc-course.world.author": "NanoAttack",
+  "painting.mc-course.shrimp.title": "Shrimp",
+  "painting.mc-course.shrimp.author": "NanoAttack",
+  "painting.mc-course.saw_them.title": "Saw Them",
+  "painting.mc-course.saw_them.author": "NanoAttack"
 }

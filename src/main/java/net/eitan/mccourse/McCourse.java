@@ -4,7 +4,9 @@ import net.eitan.mccourse.block.ModBlocks;
 import net.eitan.mccourse.enchantment.ModEnchantments;
 import net.eitan.mccourse.item.ModItemGroup;
 import net.eitan.mccourse.item.ModItems;
+import net.eitan.mccourse.painting.ModPaintings;
 import net.eitan.mccourse.sound.ModSounds;
+import net.eitan.mccourse.util.ModLootTableModifiers;
 import net.eitan.mccourse.util.ModRegistries;
 import net.fabricmc.api.ModInitializer;
 
@@ -28,5 +30,7 @@ public class McCourse implements ModInitializer {
 		ModEnchantments.regiserModEnchantments();
 
 		ModSounds.registerSounds();
+		ModLootTableModifiers.modifyLootTables();
+		ModPaintings.registerPaintings();
 	}
 }
