@@ -69,5 +69,9 @@
   "painting.mc-course.saw_them.title": "Saw Them",
   "painting.mc-course.saw_them.author": "NanoAttack",
 
-  "effect.mc-course.slimey": "Slimey"
+  "effect.mc-course.slimey": "Slimey",
+
+  "item.minecraft.potion.effect.slimey_potion": "Slimey Potion",
+  "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
+  "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion"
 }

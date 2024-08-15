@@ -11,7 +11,7 @@ import net.minecraft.util.Identifier;
 public class ModPotions {
 
     public static final Potion SLIMEY_POTION = registerPotion("slimey_potion",
-            new Potion(new StatusEffectInstance(ModEffects.SLIMEY, 200, 0)));
+            new Potion(new StatusEffectInstance(ModEffects.SLIMEY, 1800, 0)));
 
     private static Potion registerPotion(String name, Potion potion) {
         return Registry.register(Registries.POTION, new Identifier(McCourse.MOD_ID, name), potion);
