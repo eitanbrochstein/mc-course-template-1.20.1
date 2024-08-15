@@ -1,10 +1,12 @@
 package net.eitan.mccourse;
 
 import net.eitan.mccourse.block.ModBlocks;
+import net.eitan.mccourse.effect.ModEffects;
 import net.eitan.mccourse.enchantment.ModEnchantments;
 import net.eitan.mccourse.item.ModItemGroup;
 import net.eitan.mccourse.item.ModItems;
 import net.eitan.mccourse.painting.ModPaintings;
+import net.eitan.mccourse.potion.ModPotions;
 import net.eitan.mccourse.sound.ModSounds;
 import net.eitan.mccourse.util.ModLootTableModifiers;
 import net.eitan.mccourse.util.ModRegistries;
@@ -32,5 +34,7 @@ public class McCourse implements ModInitializer {
 		ModSounds.registerSounds();
 		ModLootTableModifiers.modifyLootTables();
 		ModPaintings.registerPaintings();
+		ModEffects.registerEffects();
+		ModPotions.registerPotions();
 	}
 }

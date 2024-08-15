@@ -5,11 +5,14 @@ import net.eitan.mccourse.command.SetHomeCommand;
 import net.eitan.mccourse.event.AttackEntityHandler;
 import net.eitan.mccourse.event.PlayerCopyHandler;
 import net.eitan.mccourse.item.ModItems;
+import net.eitan.mccourse.mixin.BrewingRecipeRegistryMixin;
+import net.eitan.mccourse.potion.ModPotions;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.ComposterBlock;
+import net.minecraft.potion.Potions;
 
 public class ModRegistries {
     public static void registerModStuffs() {
@@ -17,6 +20,7 @@ public class ModRegistries {
         registerCompostables();
         registerCommands();
         registerEntity();
+        registerPotionRecipes();
     }
 
     private static void registerFuels() {
@@ -38,5 +42,9 @@ public class ModRegistries {
     private static void registerEntity() {
         AttackEntityCallback.EVENT.register(new AttackEntityHandler());
         ServerPlayerEvents.COPY_FROM.register(new PlayerCopyHandler());
+    }
+
+    private static void registerPotionRecipes() {
+        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, ModItems.PINK_GARNET, ModPotions.SLIMEY_POTION);
     }
 }
