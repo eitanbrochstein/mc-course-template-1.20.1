@@ -3,6 +3,7 @@ package net.eitan.mccourse.datagen;
 import net.eitan.mccourse.block.ModBlocks;
 import net.eitan.mccourse.block.custom.CauliflowerCropBlock;
 import net.eitan.mccourse.block.custom.PinkGarnetLampBlock;
+import net.eitan.mccourse.fluid.ModFluids;
 import net.eitan.mccourse.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -81,5 +82,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.PINK_GARNET_HORSE_ARMOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.BAR_BRAWL_MUSIC_DISC, Models.GENERATED);
         itemModelGenerator.register(ModItems.RICKROLL_MUSIC_DISC, Models.GENERATED);
+        itemModelGenerator.register(ModFluids.SOAP_WATER_BUCKET, Models.GENERATED);
     }
 }

@@ -6,7 +6,12 @@
 		"ExampleMixin",
 		"ModEntityDataSaverMixin",
 		"PlayerEntityMixin",
-		"BrewingRecipeRegistryMixin"
+		"BrewingRecipeRegistryMixin",
+	],
+	"client": [
+		"ItemRendererMixin",
+		"ItemRendererAccessor",
+		"ModelLoaderMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

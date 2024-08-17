@@ -1,4 +1,4 @@
-// 1.20.1	2024-08-15T17:44:46.2835978	Mc Course/Model Definitions
+// 1.20.1	2024-08-16T15:04:17.227819	Mc Course/Model Definitions
 183b441f768caa0162347e0c969eabfba2e2031e assets\mc-course\models\block\pink_garnet_stairs.json
 07aa93a055df80fd13acfba9d81ac568ff14aa2d assets\mc-course\models\item\pink_garnet_trapdoor.json
 15da0ddd8c0eb7bd57b893ee4eb13711079b0d42 assets\mc-course\models\item\pink_garnet_leggings_emerald_trim.json
@@ -41,6 +41,7 @@ c1afde7ad8f7fc8cdb29fae270b257da16cb5f2e assets\mc-course\models\block\cauliflow
 f23a2964c1e15f5c414292d304d845a9991f39be assets\mc-course\models\block\pink_garnet_stairs_outer.json
 e11d7b4fe14f75cf836f9f2930e56f2717e54a12 assets\mc-course\models\block\cauliflower_crop_stage1.json
 0317a67dea84c20e900de0fd33ad3fbd99d483cc assets\mc-course\models\item\bar_brawl_music_disc.json
+9679b3fefb3a5c4cb3800c50d303c476040c6a68 assets\mc-course\models\item\soap_water_bucket.json
 f7f3daf69c9b113694bf56eec3bd416c9a3715d1 assets\mc-course\models\block\pink_garnet_lamp_block.json
 d24ef69c01279d49fb531d0c41c0fa0299fc7e86 assets\mc-course\models\item\pink_garnet_leggings.json
 d2f0bc34de806e67f59df5a297bf978ff69b4734 assets\mc-course\models\item\pink_garnet_slab.json
@@ -92,8 +93,8 @@ cf1a2dba9cb94ebe2f4cd38592b57ff8de9d041b assets\mc-course\models\block\cauliflow
 17eccdd44b3daaf4a4300809031c9707cd067c3f assets\mc-course\models\block\end_stone_pink_garnet_ore.json
 b3e7028073fc8fb4a76f312c3aaa79d7a1d63917 assets\mc-course\models\block\pink_garnet_button.json
 891812d34f0150358808b7d64fce55f55758c9fb assets\mc-course\blockstates\pink_garnet_ore.json
-af97571f14a61870343e094d480fac91039c6469 assets\mc-course\blockstates\gem_empowering_station.json
 f51e7d366b918419981ee18981f454912b658892 assets\mc-course\blockstates\pink_garnet_fence.json
+af97571f14a61870343e094d480fac91039c6469 assets\mc-course\blockstates\gem_empowering_station.json
 b3e4cef213e9273b112b0d77f819d86a09899084 assets\mc-course\blockstates\pink_garnet_trapdoor.json
 f0828c964cb3ff7163eda0ba4cbe288254146c1e assets\mc-course\blockstates\sound_block.json
 576a891018bc9894bea5795a9f656e225e55542b assets\mc-course\models\block\petunia.json
@@ -123,10 +124,10 @@ e9ac0d07bb0cd96d54688ac9a711750ca915fecd assets\mc-course\models\item\pink_garne
 cfd35f4ff4de8194e1f11062ec40c31a4c426c62 assets\mc-course\models\item\pink_garnet_lamp_block.json
 8ea93ae9b637465f1190128614e26c874760abb1 assets\mc-course\blockstates\end_stone_pink_garnet_ore.json
 c5e04ae3c70fe2f76ba9227fe558bd3f00a0206b assets\mc-course\models\item\pink_garnet_leggings_copper_trim.json
-ddcdc73df3964d9adcbf4dbf97bcb9a5bbce019c assets\mc-course\models\block\pink_garnet_block.json
 f0dd899f18e41c36a319bdae913a38293ab2a3e5 assets\mc-course\models\item\pink_garnet_block.json
-8290c193d99978cee1b9d670e31253468aa6efc7 assets\mc-course\models\item\pink_garnet_leggings_gold_trim.json
+ddcdc73df3964d9adcbf4dbf97bcb9a5bbce019c assets\mc-course\models\block\pink_garnet_block.json
 61bf6e4554f3353e2ce20a726d785e57beae99cf assets\mc-course\blockstates\pink_garnet_block.json
+8290c193d99978cee1b9d670e31253468aa6efc7 assets\mc-course\models\item\pink_garnet_leggings_gold_trim.json
 c5a3ad6eb71f47860763ad0d12c396c819bd5c85 assets\mc-course\models\item\pink_garnet_helmet_redstone_trim.json
 b092c61a213061fad2708a6425122147cde419a3 assets\mc-course\blockstates\pink_garnet_slab.json
 7dce37cefa1c616455869c3bdfa1f8c0c99f8362 assets\mc-course\models\item\cauliflower.json
@@ -144,7 +145,7 @@ e0f89f375188b735da1c0d606db6ad2c157e7053 assets\mc-course\blockstates\potted_pet
 a7419a05d083f2fc308b9aac0c8343e983c9dd10 assets\mc-course\models\block\pink_garnet_wall_inventory.json
 1d1d3da1d5db64b95a7380f8c9e272b266f1834d assets\mc-course\blockstates\pink_garnet_lamp_block.json
 37201ad1d48d96c8c672fcfe1193bb1f7a126225 assets\mc-course\models\item\pink_garnet_boots_emerald_trim.json
-3028009ba6ecdc7495f91da83b77323cb8090c1b assets\mc-course\blockstates\petunia.json
 088c5cf00e1650f620609c2de69362e73366969d assets\mc-course\models\block\pink_garnet_door_bottom_left_open.json
+3028009ba6ecdc7495f91da83b77323cb8090c1b assets\mc-course\blockstates\petunia.json
 1c85650f5988b68f75cb06f3eabb7ff38effdf37 assets\mc-course\models\item\metal_detector.json
 dfd9a3d38d5df8d90ac202f4911e1494ca725d34 assets\mc-course\models\item\rickroll_music_disc.json

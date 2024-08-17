@@ -1,11 +1,12 @@
 {
+  "parent": "mc-course:mc-course",
   "criteria": {
     "has_pink_garnet": {
       "conditions": {
         "items": [
           {
             "items": [
-              "mc-course:pink_garnet"
+              "mc-course:metal_detector"
             ]
           }
         ]
@@ -15,9 +16,9 @@
   },
   "display": {
     "announce_to_chat": true,
-    "background": "mc-course:textures/block/pink_garnet_ore.png",
+    "background": "mc-course:block/pink_garnet_ore",
     "description": {
-      "text": "The Power lies in the Pink Garnet"
+      "text": "Batteries not included!"
     },
     "frame": "task",
     "hidden": false,
@@ -26,7 +27,7 @@
     },
     "show_toast": true,
     "title": {
-      "text": "Mc Course"
+      "text": "Metal Detector"
     }
   },
   "requirements": [

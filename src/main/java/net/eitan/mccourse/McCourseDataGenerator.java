@@ -16,5 +16,7 @@ public class McCourseDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModRecipeGenerator::new);
 		pack.addProvider(ModPaintingVariantTagProvider::new);
 		pack.addProvider(ModAdvancementProvider::new);
+		pack.addProvider(ModPOITagProvider::new);
+		pack.addProvider(ModFluidTagProvider::new);
 	}
 }

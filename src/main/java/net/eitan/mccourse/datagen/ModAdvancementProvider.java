@@ -27,7 +27,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
         Advancement rootAdvancement = Advancement.Builder.create()
                 .display(new AdvancementDisplay(new ItemStack(ModItems.PINK_GARNET),
                         Text.literal("Mc Course"), Text.literal("The Power lies in the Pink Garnet"),
-                        new Identifier(McCourse.MOD_ID, "block/pink_garnet_ore"), AdvancementFrame.TASK,
+                        new Identifier(McCourse.MOD_ID, "textures/block/pink_garnet_ore.png"), AdvancementFrame.TASK,
                         true, true, false))
                 .criterion("has_pink_garnet", InventoryChangedCriterion.Conditions.items(ModItems.PINK_GARNET)) // checks when your inventory changes and finds a pink garnet
                 .build(consumer, McCourse.MOD_ID + ":mc-course");
@@ -37,9 +37,8 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                         Text.literal("Metal Detector"), Text.literal("Batteries not included!"),
                         new Identifier(McCourse.MOD_ID, "block/pink_garnet_ore"), AdvancementFrame.TASK,
                         true, true, false))
-                .criterion("has_pink_garnet", UsingItemCriterion.Conditions.create(EntityPredicate.Builder.create(), // checks when the metal detector is used
-                                ItemPredicate.Builder.create().items(ModItems.METAL_DETECTOR)))
+                .criterion("has_pink_garnet", InventoryChangedCriterion.Conditions.items(ModItems.METAL_DETECTOR))
                 .parent(rootAdvancement)
-                .build(consumer, McCourse.MOD_ID + ":mc-course");
+                .build(consumer, McCourse.MOD_ID + ":metal_detector");
     }
 }

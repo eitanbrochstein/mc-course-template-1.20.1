@@ -2,6 +2,7 @@ package net.eitan.mccourse.item;
 
 import net.eitan.mccourse.McCourse;
 import net.eitan.mccourse.block.ModBlocks;
+import net.eitan.mccourse.fluid.ModFluids;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -43,6 +44,7 @@ public class ModItemGroup {
                         entries.add(ModBlocks.END_STONE_PINK_GARNET_ORE);
                         entries.add(ModBlocks.NETHER_PINK_GARNET_ORE);
                         entries.add(ModBlocks.PINK_GARNET_ORE);
+                        entries.add(ModFluids.SOAP_WATER_BUCKET);
 
                         entries.add(ModBlocks.SOUND_BLOCK);
                         entries.add(ModBlocks.PINK_GARNET_STAIRS);

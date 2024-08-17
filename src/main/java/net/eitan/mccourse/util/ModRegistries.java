@@ -1,5 +1,6 @@
 package net.eitan.mccourse.util;
 
+import net.eitan.mccourse.block.ModBlocks;
 import net.eitan.mccourse.command.ReturnHomeCommand;
 import net.eitan.mccourse.command.SetHomeCommand;
 import net.eitan.mccourse.event.AttackEntityHandler;
@@ -7,12 +8,18 @@ import net.eitan.mccourse.event.PlayerCopyHandler;
 import net.eitan.mccourse.item.ModItems;
 import net.eitan.mccourse.mixin.BrewingRecipeRegistryMixin;
 import net.eitan.mccourse.potion.ModPotions;
+import net.eitan.mccourse.villager.ModVillagers;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
+import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.ComposterBlock;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
+import net.minecraft.village.TradeOffer;
+import net.minecraft.village.VillagerProfession;
 
 public class ModRegistries {
     public static void registerModStuffs() {
@@ -21,6 +28,7 @@ public class ModRegistries {
         registerCommands();
         registerEntity();
         registerPotionRecipes();
+        registerCustomTrades();
     }
 
     private static void registerFuels() {
@@ -46,5 +54,116 @@ public class ModRegistries {
 
     private static void registerPotionRecipes() {
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, ModItems.PINK_GARNET, ModPotions.SLIMEY_POTION);
+    }
+
+    private static void registerCustomTrades() {
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, Factories -> {
+            Factories.add(((entity, random) -> new TradeOffer(
+                    new ItemStack(Items.EMERALD, 2),
+                    new ItemStack(ModItems.CAULIFLOWER, 2),
+                    12,
+                    2,
+                    0.02f
+            )));
+        });
+
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.TOOLSMITH, 1, Factories -> {
+            Factories.add(((entity, random) -> new TradeOffer(
+                    new ItemStack(Items.EMERALD, 26),
+                    new ItemStack(ModItems.PINK_GARNET_PAXEL, 1),
+                    6,
+                    2,
+                    0.05f
+            )));
+        });
+
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.SOUND_MASTER, 1, Factories -> {
+            Factories.add(((entity, random) -> new TradeOffer(
+                    new ItemStack(Items.EMERALD, 4),
+                    new ItemStack(ModItems.RADIATION_STAFF, 1),
+                    6,
+                    2,
+                    0.05f
+            )));
+        });
+
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.SOUND_MASTER, 1, Factories -> {
+            Factories.add(((entity, random) -> new TradeOffer(
+                    new ItemStack(Items.EMERALD, 2),
+                    new ItemStack(Items.NOTE_BLOCK, 1),
+                    6,
+                    2,
+                    0.05f
+            )));
+        });
+
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.SOUND_MASTER, 2, Factories -> {
+            Factories.add(((entity, random) -> new TradeOffer(
+                    new ItemStack(Items.EMERALD, 15),
+                    new ItemStack(ModItems.RICKROLL_MUSIC_DISC, 1),
+                    6,
+                    2,
+                    0.05f
+            )));
+        });
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.SOUND_MASTER, 2, Factories -> {
+            Factories.add(((entity, random) -> new TradeOffer(
+                    new ItemStack(Items.EMERALD, 15),
+                    new ItemStack(ModItems.BAR_BRAWL_MUSIC_DISC, 1),
+                    6,
+                    2,
+                    0.05f
+            )));
+        });
+
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.SOUND_MASTER, 3, Factories -> {
+            Factories.add(((entity, random) -> new TradeOffer(
+                    new ItemStack(Items.EMERALD, 20),
+                    new ItemStack(ModItems.METAL_DETECTOR, 1),
+                    6,
+                    2,
+                    0.05f
+            )));
+        });
+
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.SOUND_MASTER, 3, Factories -> {
+            Factories.add(((entity, random) -> new TradeOffer(
+                    new ItemStack(Items.EMERALD, 32),
+                    new ItemStack(ModBlocks.GEM_EMPOWERING_STATION, 1),
+                    6,
+                    2,
+                    0.05f
+            )));
+        });
+
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.SOUND_MASTER, 4, Factories -> {
+            Factories.add(((entity, random) -> new TradeOffer(
+                    new ItemStack(ModItems.PINK_GARNET, 1),
+                    new ItemStack(Items.EMERALD, 3),
+                    12,
+                    2,
+                    0.05f
+            )));
+        });
+
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.SOUND_MASTER, 4, Factories -> {
+            Factories.add(((entity, random) -> new TradeOffer(
+                    new ItemStack(Items.EMERALD, 15),
+                    new ItemStack(ModItems.PINK_GARNET_AXE, 1),
+                    6,
+                    2,
+                    0.05f
+            )));
+        });
+
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.SOUND_MASTER, 4, Factories -> {
+            Factories.add(((entity, random) -> new TradeOffer(
+                    new ItemStack(Items.EMERALD, 17),
+                    new ItemStack(ModItems.PINK_GARNET_SWORD, 1),
+                    6,
+                    2,
+                    0.05f
+            )));
+        });
     }
 }
