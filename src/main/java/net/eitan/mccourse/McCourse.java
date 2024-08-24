@@ -10,6 +10,7 @@ import net.eitan.mccourse.item.ModItems;
 import net.eitan.mccourse.painting.ModPaintings;
 import net.eitan.mccourse.particle.ModParticles;
 import net.eitan.mccourse.potion.ModPotions;
+import net.eitan.mccourse.recipe.ModRecipes;
 import net.eitan.mccourse.screen.ModScreenHandlers;
 import net.eitan.mccourse.sound.ModSounds;
 import net.eitan.mccourse.util.ModLootTableModifiers;
@@ -49,5 +50,6 @@ public class McCourse implements ModInitializer {
 		ModBlockEntities.registerBlockEntites();
 
 		ModScreenHandlers.registerScreenHandler();
+		ModRecipes.registerRecipes();
 	}
 }

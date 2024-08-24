@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "mc-course:saw_them",
+      "required": false
+    },
+    {
+      "id": "mc-course:shrimp",
+      "required": false
+    },
+    {
+      "id": "mc-course:world",
+      "required": false
+    }
+  ]
+}

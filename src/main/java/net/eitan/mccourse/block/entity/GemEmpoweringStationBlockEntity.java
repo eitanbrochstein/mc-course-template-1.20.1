@@ -2,6 +2,7 @@ package net.eitan.mccourse.block.entity;
 
 import net.eitan.mccourse.block.ModBlocks;
 import net.eitan.mccourse.item.ModItems;
+import net.eitan.mccourse.recipe.GemEmpoweringRecipe;
 import net.eitan.mccourse.screen.GemEmpoweringScreenHandler;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
@@ -10,6 +11,7 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
+import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
@@ -21,6 +23,8 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class GemEmpoweringStationBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
 
@@ -113,8 +117,10 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Exte
     }
 
     private void craftItem() {
+        Optional<GemEmpoweringRecipe> recipe = getCurrentRecipe();
+
         this.removeStack(INPUT_SLOT, 1);
-        this.setStack(OUTPUT_SLOT, new ItemStack(ModItems.PINK_GARNET, this.getStack(OUTPUT_SLOT).getCount() + 1));
+        this.setStack(OUTPUT_SLOT, new ItemStack(recipe.get().getOutput(null).getItem(), recipe.get().getOutput(null).getCount()));
     }
 
     private void resetProgress() {
@@ -122,7 +128,7 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Exte
     }
 
     private boolean hasCraftingFinished() {
-        return this.progress <= this.maxProgress;
+        return this.progress >= this.maxProgress;
     }
 
     private void increateCraftingProgress() {
@@ -130,7 +136,33 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Exte
     }
 
     private boolean hasRecipe() {
-        return this.getStack(INPUT_SLOT).getItem() == ModItems.RAW_PINK_GARNET;
+
+        Optional<GemEmpoweringRecipe> recipe = getCurrentRecipe();
+
+        if (recipe.isEmpty()) {
+            return false;
+        };
+        ItemStack output = recipe.get().getOutput(null);
+        return canInsertAmountIntoOutputSlot(output.getCount())
+                && canInsertItemIntoOutputSlot(output);
+    }
+
+    private boolean canInsertItemIntoOutputSlot(ItemStack output) {
+        return this.getStack(OUTPUT_SLOT).isEmpty() || this.getStack(OUTPUT_SLOT).getItem() == output.getItem();
+    }
+
+    private boolean canInsertAmountIntoOutputSlot(int count) {
+        return this.getStack(OUTPUT_SLOT).getMaxCount() >= this.getStack(OUTPUT_SLOT).getCount() + count;
+    }
+
+    private Optional<GemEmpoweringRecipe> getCurrentRecipe() {
+        SimpleInventory inventory = new SimpleInventory(this.size());
+        for (int i = 0; i < this.size(); i++) {
+            inventory.setStack(i, this.getStack(i));
+        }
+
+        return this.getWorld().getRecipeManager().getFirstMatch(GemEmpoweringRecipe.Type.INSTANCE, inventory, this.getWorld());
+
     }
 
     private boolean canInsertIntoOutputSlot() {
