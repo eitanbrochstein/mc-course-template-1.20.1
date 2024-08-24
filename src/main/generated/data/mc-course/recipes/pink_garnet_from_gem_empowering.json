@@ -1,0 +1,12 @@
+{
+  "type": "mc-course:gem_empowering",
+  "ingredients": [
+    {
+      "item": "mc-course:raw_pink_garnet"
+    }
+  ],
+  "output": {
+    "count": 3,
+    "item": "mc-course:pink_garnet"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "mc-course:gem_empowering",
+  "ingredients": [
+    {
+      "item": "minecraft:redstone"
+    }
+  ],
+  "output": {
+    "count": 8,
+    "item": "minecraft:emerald"
+  }
+}

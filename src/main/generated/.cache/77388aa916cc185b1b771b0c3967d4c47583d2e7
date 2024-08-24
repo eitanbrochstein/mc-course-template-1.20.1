@@ -1,4 +1,4 @@
-// 1.20.1	2024-08-16T15:04:17.227819	Mc Course/Model Definitions
+// 1.20.1	2024-08-23T21:17:49.4511141	Mc Course/Model Definitions
 183b441f768caa0162347e0c969eabfba2e2031e assets\mc-course\models\block\pink_garnet_stairs.json
 07aa93a055df80fd13acfba9d81ac568ff14aa2d assets\mc-course\models\item\pink_garnet_trapdoor.json
 15da0ddd8c0eb7bd57b893ee4eb13711079b0d42 assets\mc-course\models\item\pink_garnet_leggings_emerald_trim.json
@@ -10,8 +10,8 @@ e68c9fc668ff5c18e49d351a2afbb099c522c0cf assets\mc-course\models\item\pink_garne
 5810c5f50159de2893957978329e4c572a179e85 assets\mc-course\models\item\pink_garnet_chestplate_gold_trim.json
 0b984cbc10a4e24c38884710494aa9e85505f611 assets\mc-course\models\block\pink_garnet_door_top_right.json
 2c246745052b840418484557071a9b29f35303a0 assets\mc-course\models\block\pink_garnet_wall_side.json
-898363f01f0e64628c557114e0219af57b05cefc assets\mc-course\models\item\pink_garnet_leggings_netherite_trim.json
 db04c556d62a49a5c4d726692c0d18dda49a271e assets\mc-course\models\item\pink_garnet_leggings_quartz_trim.json
+898363f01f0e64628c557114e0219af57b05cefc assets\mc-course\models\item\pink_garnet_leggings_netherite_trim.json
 a1fa16d1e2033530708cca1da9813b8344f49d84 assets\mc-course\models\item\pink_garnet_boots_gold_trim.json
 4826264b2234c204b785c446237162febfc5f777 assets\mc-course\models\item\pink_garnet_horse_armor.json
 6efc617f1356e18615c8b2cb80dde7c4423faaea assets\mc-course\models\block\pink_garnet_wall_side_tall.json
@@ -58,8 +58,8 @@ a364c4505aa491e5dac7534ef16984446e66ca6f assets\mc-course\models\item\pink_garne
 d5300782b10a43531c81702815eee04bade1a8f6 assets\mc-course\models\item\pink_garnet_chestplate_copper_trim.json
 7b12720ef2f4baefd351daa9576af4528ae45d11 assets\mc-course\models\item\petunia.json
 80ecde20ff7812730697786637ef45fe5d25fedd assets\mc-course\models\block\nether_pink_garnet_ore.json
-45851cbe6094cf0f0e3024ca9a838b4f2723bd11 assets\mc-course\models\block\pink_garnet_trapdoor_bottom.json
 279342ae746a293ebdaff6c5e954ec1d4507b1ed assets\mc-course\models\item\pink_garnet_wall.json
+45851cbe6094cf0f0e3024ca9a838b4f2723bd11 assets\mc-course\models\block\pink_garnet_trapdoor_bottom.json
 f29be3adeca198fa92abbfc41ac2018bc26db7fd assets\mc-course\models\item\pink_garnet_helmet_amethyst_trim.json
 e0f8daa9c2e20acff4df8bd2ac9d32d28d78d0b3 assets\mc-course\models\block\pink_garnet_pressure_plate.json
 30f241e8dc99ff5b80de752f65fde4bf747126a4 assets\mc-course\blockstates\raw_pink_garnet_block.json
@@ -93,8 +93,8 @@ cf1a2dba9cb94ebe2f4cd38592b57ff8de9d041b assets\mc-course\models\block\cauliflow
 17eccdd44b3daaf4a4300809031c9707cd067c3f assets\mc-course\models\block\end_stone_pink_garnet_ore.json
 b3e7028073fc8fb4a76f312c3aaa79d7a1d63917 assets\mc-course\models\block\pink_garnet_button.json
 891812d34f0150358808b7d64fce55f55758c9fb assets\mc-course\blockstates\pink_garnet_ore.json
-f51e7d366b918419981ee18981f454912b658892 assets\mc-course\blockstates\pink_garnet_fence.json
 af97571f14a61870343e094d480fac91039c6469 assets\mc-course\blockstates\gem_empowering_station.json
+f51e7d366b918419981ee18981f454912b658892 assets\mc-course\blockstates\pink_garnet_fence.json
 b3e4cef213e9273b112b0d77f819d86a09899084 assets\mc-course\blockstates\pink_garnet_trapdoor.json
 f0828c964cb3ff7163eda0ba4cbe288254146c1e assets\mc-course\blockstates\sound_block.json
 576a891018bc9894bea5795a9f656e225e55542b assets\mc-course\models\block\petunia.json
@@ -126,8 +126,8 @@ cfd35f4ff4de8194e1f11062ec40c31a4c426c62 assets\mc-course\models\item\pink_garne
 c5e04ae3c70fe2f76ba9227fe558bd3f00a0206b assets\mc-course\models\item\pink_garnet_leggings_copper_trim.json
 f0dd899f18e41c36a319bdae913a38293ab2a3e5 assets\mc-course\models\item\pink_garnet_block.json
 ddcdc73df3964d9adcbf4dbf97bcb9a5bbce019c assets\mc-course\models\block\pink_garnet_block.json
-61bf6e4554f3353e2ce20a726d785e57beae99cf assets\mc-course\blockstates\pink_garnet_block.json
 8290c193d99978cee1b9d670e31253468aa6efc7 assets\mc-course\models\item\pink_garnet_leggings_gold_trim.json
+61bf6e4554f3353e2ce20a726d785e57beae99cf assets\mc-course\blockstates\pink_garnet_block.json
 c5a3ad6eb71f47860763ad0d12c396c819bd5c85 assets\mc-course\models\item\pink_garnet_helmet_redstone_trim.json
 b092c61a213061fad2708a6425122147cde419a3 assets\mc-course\blockstates\pink_garnet_slab.json
 7dce37cefa1c616455869c3bdfa1f8c0c99f8362 assets\mc-course\models\item\cauliflower.json
