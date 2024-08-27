@@ -23,6 +23,9 @@
 		],
 		"client": [
 			"net.eitan.mccourse.McCourseClient"
+		],
+		"rei_client": [
+			"net.eitan.mccourse.McCourseClientPlugin"
 		]
 	},
 	"mixins": [
