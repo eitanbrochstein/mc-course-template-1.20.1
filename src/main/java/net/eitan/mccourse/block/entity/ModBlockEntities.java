@@ -7,6 +7,7 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import team.reborn.energy.api.EnergyStorage;
 
 public class ModBlockEntities {
 
@@ -17,5 +18,7 @@ public class ModBlockEntities {
 
     public static void registerBlockEntites() {
         McCourse.LOGGER.info("Registering Block Entities for" + McCourse.MOD_ID);
+
+        EnergyStorage.SIDED.registerForBlockEntity((blockEntity, direction) -> blockEntity.energyStorage, GEM_EMPOWERING_STATION_BE);
     }
 }

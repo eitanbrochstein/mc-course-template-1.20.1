@@ -18,7 +18,7 @@ public class GemEmpoweringScreenHandler extends ScreenHandler {
 
     private final Inventory inventory;
     private final PropertyDelegate propertyDelegate;
-    private final GemEmpoweringStationBlockEntity blockEntity;
+    public final GemEmpoweringStationBlockEntity blockEntity;
 
     public GemEmpoweringScreenHandler(int syncId, PlayerInventory inventory, PacketByteBuf buf) {
         this(syncId, inventory, inventory.player.getWorld().getBlockEntity(buf.readBlockPos()),
