@@ -5,15 +5,20 @@ import net.eitan.mccourse.block.custom.GemEmpoweringStationBlock;
 import net.eitan.mccourse.item.ModItems;
 import net.eitan.mccourse.recipe.GemEmpoweringRecipe;
 import net.eitan.mccourse.screen.GemEmpoweringScreenHandler;
+import net.fabricmc.fabric.api.transfer.v1.fluid.FluidConstants;
+import net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant;
+import net.fabricmc.fabric.api.transfer.v1.storage.base.SingleVariantStorage;
 import net.fabricmc.fabric.api.transfer.v1.transaction.Transaction;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.listener.ClientPlayPacketListener;
@@ -83,6 +88,24 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Exte
     }
 
     public final SimpleEnergyStorage energyStorage = new SimpleEnergyStorage(64000, 200, 200) {
+        @Override
+        protected void onFinalCommit() {
+            markDirty();
+            getWorld().updateListeners(pos, getCachedState(), getCachedState(), 3);
+        }
+    };
+
+    public final SingleVariantStorage<FluidVariant> fluidStorage = new SingleVariantStorage<FluidVariant>() {
+        @Override
+        protected FluidVariant getBlankVariant() {
+            return FluidVariant.blank();
+        }
+
+        @Override
+        protected long getCapacity(FluidVariant variant) {
+            return (FluidConstants.BUCKET / 81) * 64; // 1 bucket = 81000 = 1000mB || *64 ==> 64000mB = 64 Buckets
+        }
+
         @Override
         protected void onFinalCommit() {
             markDirty();
@@ -171,6 +194,8 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Exte
         Inventories.writeNbt(nbt, inventory);
         nbt.putInt("gem_empowering_station.progress", progress);
         nbt.putLong(("gem_empowering_station.energy"), energyStorage.amount);
+        nbt.put("gem_empowering_station.variant", fluidStorage.variant.getNbt());
+        nbt.putLong("gem_empowering_station.fluid_amount", fluidStorage.amount);
     }
 
     @Override
@@ -178,12 +203,15 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Exte
         Inventories.readNbt(nbt, inventory);
         progress = nbt.getInt("gem_empowering_station.progress");
         energyStorage.amount = nbt.getLong("gem_empowering_station.energy");
+        fluidStorage.variant = FluidVariant.fromNbt((NbtCompound) nbt.get("gem_empowering_station.variant"));
+        fluidStorage.amount = nbt.getLong("gem_empowering_station.fluid_amount");
         super.readNbt(nbt);
     }
 
     // main function
     public void tick(World world, BlockPos pos, BlockState state) {
         fillUpOnEnergy(); // until we have machines/other mods giving us energy
+        fillUpOnFluid();
 
         if (canInsertIntoOutputSlot() && hasRecipe()) {
             increateCraftingProgress();
@@ -192,11 +220,38 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Exte
 
             if (hasCraftingFinished()) {
                 craftItem();
+                extractFluid();
                 resetProgress();
             }
         } else {
             resetProgress();
         }
+    }
+
+    private void extractFluid() {
+        try(Transaction transaction = Transaction.openOuter()) {
+            this.fluidStorage.extract(FluidVariant.of(Fluids.WATER), 500, transaction);
+            transaction.commit();
+        }
+    }
+
+    private void fillUpOnFluid() {
+        if (hasFluidSourceItemInFluidSlot(FLUID_ITEM_SLOT)) {
+            transferItemFluidToTank(FLUID_ITEM_SLOT);
+        }
+    }
+
+    private void transferItemFluidToTank(int fluidItemSlot) {
+        try(Transaction transaction = Transaction.openOuter()) {
+            this.fluidStorage.insert(FluidVariant.of(Fluids.WATER),
+                    FluidConstants.BUCKET/81, transaction);
+            transaction.commit();
+            this.setStack(fluidItemSlot, new ItemStack(Items.BUCKET));
+        }
+    }
+
+    private boolean hasFluidSourceItemInFluidSlot(int fluidItemSlot) {
+        return this.getStack(fluidItemSlot).getItem() == Items.WATER_BUCKET;
     }
 
     private void extractEnergy() {
@@ -247,7 +302,11 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Exte
         };
         ItemStack output = recipe.get().getOutput(null);
         return canInsertAmountIntoOutputSlot(output.getCount())
-                && canInsertItemIntoOutputSlot(output) && hasEnoughEnergyToCraft();
+                && canInsertItemIntoOutputSlot(output) && hasEnoughEnergyToCraft() && hasEnoughFluidToCraft();
+    }
+
+    private boolean hasEnoughFluidToCraft() {
+        return this.fluidStorage.amount >= 500;
     }
 
     private boolean hasEnoughEnergyToCraft() {

@@ -77,5 +77,8 @@
 
   "entity.minecraft.villager.soundmaster": "Soundmaster",
 
-  "item.mc-course.soap_water_bucket": "Soap Water Bucket"
+  "item.mc-course.soap_water_bucket": "Soap Water Bucket",
+
+  "mccourse.tooltip.liquid.amount.with.capacity": "%s / %s mB",
+  "mccourse.tooltip.liquid.amount": "%s mB"
 }
