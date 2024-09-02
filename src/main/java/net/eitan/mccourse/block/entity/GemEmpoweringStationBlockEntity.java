@@ -194,7 +194,7 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Exte
         Inventories.writeNbt(nbt, inventory);
         nbt.putInt("gem_empowering_station.progress", progress);
         nbt.putLong(("gem_empowering_station.energy"), energyStorage.amount);
-        nbt.put("gem_empowering_station.variant", fluidStorage.variant.getNbt());
+        nbt.put("gem_empowering_station.variant", fluidStorage.variant.toNbt());
         nbt.putLong("gem_empowering_station.fluid_amount", fluidStorage.amount);
     }
 
