@@ -169,7 +169,7 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Exte
             case EAST -> side.rotateYClockwise() == Direction.SOUTH && slot == OUTPUT_SLOT ||
                     side.rotateYClockwise() == Direction.EAST && slot == OUTPUT_SLOT;
 
-            case SOUTH ->   side == Direction.SOUTH && slot == OUTPUT_SLOT ||
+            case SOUTH -> side == Direction.SOUTH && slot == OUTPUT_SLOT ||
                     side == Direction.EAST && slot == OUTPUT_SLOT;
 
             case WEST -> side.rotateYCounterclockwise() == Direction.SOUTH && slot == OUTPUT_SLOT ||
