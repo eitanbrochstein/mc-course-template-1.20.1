@@ -3,6 +3,7 @@ package net.eitan.mccourse;
 
 import net.eitan.mccourse.block.ModBlocks;
 import net.eitan.mccourse.fluid.ModFluids;
+import net.eitan.mccourse.networking.ModMessages;
 import net.eitan.mccourse.particle.ModParticles;
 import net.eitan.mccourse.particle.PinkGarnetParticle;
 import net.eitan.mccourse.screen.GemEmpoweringScreen;
@@ -39,5 +40,7 @@ public class McCourseClient implements ClientModInitializer {
         ModelLoadingRegistry.INSTANCE.registerModelProvider(((manager, out) -> new ModelIdentifier(McCourse.MOD_ID, "radiation_staff_3d", "inventory")));
 
         HandledScreens.register(ModScreenHandlers.GEM_EMPOWERING_SCREEN_HANDLER_SCREEN_HANDLER, GemEmpoweringScreen::new);
+
+        ModMessages.registerS2CPackets();
     }
 }

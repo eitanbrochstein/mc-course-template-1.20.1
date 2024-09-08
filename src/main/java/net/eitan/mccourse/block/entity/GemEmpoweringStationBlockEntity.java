@@ -17,6 +17,7 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SimpleInventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
@@ -77,6 +78,14 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Exte
         };
     }
 
+    public ItemStack getRenderStack() {
+        if (this.getStack(OUTPUT_SLOT).isEmpty()) {
+            return this.getStack(INPUT_SLOT);
+        } else {
+            return this.getStack(OUTPUT_SLOT);
+        }
+    }
+
     @Override
     public void writeScreenOpeningData(ServerPlayerEntity player, PacketByteBuf buf) {
         buf.writeBlockPos(this.pos);
@@ -85,6 +94,12 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Exte
     @Override
     public Text getDisplayName() {
         return Text.literal("Gem Empowering Station");
+    }
+
+    public void setInventory(DefaultedList<ItemStack> list) {
+        for (int i = 0; i < list.size(); i++) {
+            this.inventory.set(i, list.get(i));
+        }
     }
 
     public final SimpleEnergyStorage energyStorage = new SimpleEnergyStorage(64000, 200, 200) {
