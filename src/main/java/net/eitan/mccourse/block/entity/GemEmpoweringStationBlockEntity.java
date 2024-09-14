@@ -1,5 +1,9 @@
 package net.eitan.mccourse.block.entity;
 
+import net.eitan.mccourse.networking.ModMessages;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
+import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.eitan.mccourse.block.custom.GemEmpoweringStationBlock;
 import net.eitan.mccourse.item.ModItems;
@@ -28,6 +32,7 @@ import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
@@ -84,6 +89,22 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Exte
         } else {
             return this.getStack(OUTPUT_SLOT);
         }
+    }
+
+    @Override
+    public void markDirty() {
+        if (!world.isClient()) {
+            PacketByteBuf data = PacketByteBufs.create();
+            data.writeInt(inventory.size());
+            for (int i = 0; i < inventory.size(); i++) {
+                data.writeItemStack(inventory.get(i));
+            }
+            data.writeBlockPos(getPos());
+            for (ServerPlayerEntity player: PlayerLookup.tracking((ServerWorld) world, getPos())) {
+                ServerPlayNetworking.send(player, ModMessages.ITEM_SYNC, data);
+            }
+        }
+        super.markDirty();
     }
 
     @Override

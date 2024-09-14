@@ -2,6 +2,8 @@ package net.eitan.mccourse;
 
 
 import net.eitan.mccourse.block.ModBlocks;
+import net.eitan.mccourse.block.entity.ModBlockEntities;
+import net.eitan.mccourse.block.entity.renderer.GemEmpoweringBlockEntityRenderer;
 import net.eitan.mccourse.fluid.ModFluids;
 import net.eitan.mccourse.networking.ModMessages;
 import net.eitan.mccourse.particle.ModParticles;
@@ -17,6 +19,7 @@ import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.client.util.ModelIdentifier;
 
 public class McCourseClient implements ClientModInitializer {
@@ -42,5 +45,7 @@ public class McCourseClient implements ClientModInitializer {
         HandledScreens.register(ModScreenHandlers.GEM_EMPOWERING_SCREEN_HANDLER_SCREEN_HANDLER, GemEmpoweringScreen::new);
 
         ModMessages.registerS2CPackets();
+
+        BlockEntityRendererFactories.register(ModBlockEntities.GEM_EMPOWERING_STATION_BE, GemEmpoweringBlockEntityRenderer::new);
     }
 }
