@@ -66,6 +66,7 @@ public class ModBlocks {
         Rarity.COMMON 
     );
 
+    
     public static final Block PINK_GARNET_STAIRS = registerBlock(
         "pink_garnet_stairs",
         new StairsBlock(ModBlocks.PINK_GARNET_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),
@@ -147,6 +148,8 @@ public class ModBlocks {
 
     public static final Block GEM_EMPOWERING_STATION = registerBlock("gem_empowering_station",
             new GemEmpoweringStationBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()), Rarity.EPIC);
+
+
     
     private static Block registerBlockWithoutBlockItem(String name, Block block, Rarity rarity) {
         // minecraft type, name with mod id, block itself
