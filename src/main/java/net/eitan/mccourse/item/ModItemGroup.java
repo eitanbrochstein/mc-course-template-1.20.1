@@ -67,8 +67,15 @@ public class ModItemGroup {
 
                         entries.add(ModItems.RICKROLL_MUSIC_DISC);
                         entries.add(ModItems.BAR_BRAWL_MUSIC_DISC);
-                    }).build()
-    );
+
+                        entries.add(ModBlocks.DRIFTWOOD_LOG);
+                        entries.add(ModBlocks.DRIFTWOOD_WOOD);
+                        entries.add(ModBlocks.STRIPPED_DRIFTWOOD_LOG);
+                        entries.add(ModBlocks.STRIPPED_DRIFTWOOD_WOOD);
+                        entries.add(ModBlocks.DRIFTWOOD_PLANKS);
+                        entries.add(ModBlocks.DRIFTWOOD_SAPLING);
+                        entries.add(ModBlocks.DRIFTWOOD_LEAVES);
+                    }).build());
 
     public static void registerItemGroups() {
 

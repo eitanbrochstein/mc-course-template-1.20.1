@@ -23,8 +23,8 @@ import org.slf4j.LoggerFactory;
 
 public class McCourse implements ModInitializer {
 	public static final String MOD_ID = "mc-course";
-	
-    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
+	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
 	public void onInitialize() {

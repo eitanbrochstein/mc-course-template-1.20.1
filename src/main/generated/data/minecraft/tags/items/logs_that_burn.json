@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "mc-course:driftwood_log",
+    "mc-course:driftwood_wood",
+    "mc-course:stripped_driftwood_log",
+    "mc-course:stripped_driftwood_wood"
+  ]
+}
