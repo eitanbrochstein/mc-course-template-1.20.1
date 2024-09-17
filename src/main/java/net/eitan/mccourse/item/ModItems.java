@@ -108,6 +108,12 @@ public class ModItems {
     public static final Item PINK_GARNET_BOW = registerItem("pink_garnet_bow",
             new BowItem(new FabricItemSettings().maxCount(1).maxDamage(500)));
 
+    public static final Item DRIFTWOOD_SIGN = registerItem("driftwood_sign",
+        new SignItem(new FabricItemSettings().maxCount(16), ModBlocks.DRIFTWOOD_SIGN, ModBlocks.DRIFTWOOD_WALL_SIGN));
+    
+    public static final Item DRIFTWOOD_HANGING_SIGN = registerItem("driftwood_hanging_sign",
+        new HangingSignItem(ModBlocks.DRIFTWOOD_HANGING_SIGN, ModBlocks.DRIFTWOOD_HANGING_WALL_SIGN, new FabricItemSettings().maxCount(16)));
+
     // Register a new item with a name, and the object item, the registries give the type to the Item
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(McCourse.MOD_ID, name), item);

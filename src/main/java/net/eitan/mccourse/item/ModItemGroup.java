@@ -75,6 +75,9 @@ public class ModItemGroup {
                         entries.add(ModBlocks.DRIFTWOOD_PLANKS);
                         entries.add(ModBlocks.DRIFTWOOD_SAPLING);
                         entries.add(ModBlocks.DRIFTWOOD_LEAVES);
+
+                        entries.add(ModItems.DRIFTWOOD_SIGN);
+                        entries.add(ModItems.DRIFTWOOD_HANGING_SIGN);
                     }).build());
 
     public static void registerItemGroups() {

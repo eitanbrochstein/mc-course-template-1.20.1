@@ -17,6 +17,15 @@ public class ModBlockEntities {
                     new Identifier(McCourse.MOD_ID, "gem_empowering_block_entity"),
                     FabricBlockEntityTypeBuilder.create(GemEmpoweringStationBlockEntity::new, ModBlocks.GEM_EMPOWERING_STATION).build(null));
 
+    public static final BlockEntityType<ModSignBlockEntity> MOD_SIGN_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE,
+        new Identifier(McCourse.MOD_ID, "mod_sign_entity"),
+            FabricBlockEntityTypeBuilder.create(ModSignBlockEntity::new,
+                    ModBlocks.DRIFTWOOD_SIGN, ModBlocks.DRIFTWOOD_WALL_SIGN).build());
+
+    public static final BlockEntityType<ModHangingSignBlockEntity> MOD_HANGING_SIGN_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE, 
+        new Identifier(McCourse.MOD_ID, "mod_hanging_sign_entity"),
+        FabricBlockEntityTypeBuilder.create(ModHangingSignBlockEntity::new, ModBlocks.DRIFTWOOD_HANGING_SIGN, ModBlocks.DRIFTWOOD_HANGING_WALL_SIGN).build(null));
+
     public static void registerBlockEntites() {
         McCourse.LOGGER.info("Registering Block Entities for" + McCourse.MOD_ID);
 

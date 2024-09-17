@@ -3,9 +3,14 @@ package net.eitan.mccourse.block;
 import net.eitan.mccourse.McCourse;
 import net.eitan.mccourse.block.custom.CauliflowerCropBlock;
 import net.eitan.mccourse.block.custom.GemEmpoweringStationBlock;
+import net.eitan.mccourse.block.custom.ModHangingSignBlock;
+import net.eitan.mccourse.block.custom.ModStandingSignBlock;
+import net.eitan.mccourse.block.custom.ModWallHangingSignBlock;
+import net.eitan.mccourse.block.custom.ModWallSignBlock;
 import net.eitan.mccourse.block.custom.PinkGarnetLampBlock;
 import net.eitan.mccourse.block.custom.SoundBlock;
 import net.eitan.mccourse.sound.ModSounds;
+import net.eitan.mccourse.util.ModWoodTypes;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -180,6 +185,14 @@ public class ModBlocks {
         new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), Rarity.COMMON
     );
 
+    public static final Block DRIFTWOOD_SIGN = registerBlockWithoutBlockItem("driftwood_sign",
+            new ModStandingSignBlock(FabricBlockSettings.copyOf(Blocks.ACACIA_SIGN), ModWoodTypes.DRIFTWOOD), Rarity.COMMON);
+    public static final Block DRIFTWOOD_WALL_SIGN = registerBlockWithoutBlockItem("driftwood_wall_sign",
+            new ModWallSignBlock(FabricBlockSettings.copyOf(Blocks.ACACIA_WALL_SIGN), ModWoodTypes.DRIFTWOOD), Rarity.COMMON);
+    public static final Block DRIFTWOOD_HANGING_SIGN = registerBlockWithoutBlockItem("driftwood_hanging_sign",
+            new ModHangingSignBlock(FabricBlockSettings.copyOf(Blocks.ACACIA_HANGING_SIGN), ModWoodTypes.DRIFTWOOD), Rarity.COMMON);
+    public static final Block DRIFTWOOD_HANGING_WALL_SIGN = registerBlockWithoutBlockItem("driftwood_hanging_wall_sign",
+            new ModWallHangingSignBlock(FabricBlockSettings.copyOf(Blocks.ACACIA_WALL_HANGING_SIGN), ModWoodTypes.DRIFTWOOD), Rarity.COMMON);
     
     private static Block registerBlockWithoutBlockItem(String name, Block block, Rarity rarity) {
         // minecraft type, name with mod id, block itself
