@@ -11,6 +11,7 @@ import net.eitan.mccourse.block.custom.PinkGarnetLampBlock;
 import net.eitan.mccourse.block.custom.SoundBlock;
 import net.eitan.mccourse.sound.ModSounds;
 import net.eitan.mccourse.util.ModWoodTypes;
+import net.eitan.mccourse.world.tree.DriftwoodSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -182,7 +183,7 @@ public class ModBlocks {
     );
 
     public static final Block DRIFTWOOD_SAPLING = registerBlock("driftwood_sapling", 
-        new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), Rarity.COMMON
+        new SaplingBlock(new DriftwoodSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), Rarity.COMMON
     );
 
     public static final Block DRIFTWOOD_SIGN = registerBlockWithoutBlockItem("driftwood_sign",

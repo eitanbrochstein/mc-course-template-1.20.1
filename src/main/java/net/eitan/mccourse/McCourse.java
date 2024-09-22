@@ -16,6 +16,7 @@ import net.eitan.mccourse.sound.ModSounds;
 import net.eitan.mccourse.util.ModLootTableModifiers;
 import net.eitan.mccourse.util.ModRegistries;
 import net.eitan.mccourse.villager.ModVillagers;
+import net.eitan.mccourse.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -51,5 +52,7 @@ public class McCourse implements ModInitializer {
 
 		ModScreenHandlers.registerScreenHandler();
 		ModRecipes.registerRecipes();
+
+		ModWorldGeneration.generateModWorldGeneration();
 	}
 }
