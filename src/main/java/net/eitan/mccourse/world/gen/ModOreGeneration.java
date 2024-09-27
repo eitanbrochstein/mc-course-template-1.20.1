@@ -14,6 +14,6 @@ public class ModOreGeneration {
             GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.NETHER_PINK_GARNET_ORE_PLACED_KEY);
         
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
-            GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.END_GARNET_ORE_PLACED_KEY);
+            GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.END_PINK_GARNET_ORE_PLACED_KEY);
     }
 }
