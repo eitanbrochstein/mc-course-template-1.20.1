@@ -78,6 +78,8 @@ public class ModItemGroup {
 
                         entries.add(ModItems.DRIFTWOOD_SIGN);
                         entries.add(ModItems.DRIFTWOOD_HANGING_SIGN);
+
+                        entries.add(ModItems.PORCUPINE_SPAWN_EGG);
                     }).build());
 
     public static void registerItemGroups() {

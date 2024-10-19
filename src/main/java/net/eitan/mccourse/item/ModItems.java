@@ -2,6 +2,8 @@ package net.eitan.mccourse.item;
 
 import net.eitan.mccourse.McCourse;
 import net.eitan.mccourse.block.ModBlocks;
+import net.eitan.mccourse.entity.ModEntities;
+import net.eitan.mccourse.entity.custom.PorcupineEntity;
 import net.eitan.mccourse.item.custom.DataTabletItem;
 import net.eitan.mccourse.item.custom.MetalDetectorItem;
 import net.eitan.mccourse.item.custom.ModArmorItem;
@@ -113,6 +115,9 @@ public class ModItems {
     
     public static final Item DRIFTWOOD_HANGING_SIGN = registerItem("driftwood_hanging_sign",
         new HangingSignItem(ModBlocks.DRIFTWOOD_HANGING_SIGN, ModBlocks.DRIFTWOOD_HANGING_WALL_SIGN, new FabricItemSettings().maxCount(16)));
+
+    public static final Item PORCUPINE_SPAWN_EGG = registerItem("porcupine_spawn_egg",
+            new SpawnEggItem(ModEntities.PORCUPINE, 0xa86518, 0x3b260f, new FabricItemSettings()));
 
     // Register a new item with a name, and the object item, the registries give the type to the Item
     private static Item registerItem(String name, Item item) {

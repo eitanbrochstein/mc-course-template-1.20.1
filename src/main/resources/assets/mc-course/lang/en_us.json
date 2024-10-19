@@ -50,6 +50,10 @@
   "item.mc-course.rickroll_music_disc": "Rickroll Music Disc",
   "item.mc-course.rickroll_music_disc.desc": "Rick Astely - Never Gonna Give You Up",
 
+  "item.mc-course.porcupine_spawn_egg": "Porcupine Spawn Egg",
+
+  "entity.mc-course.porcupine": "Porcupine",
+
   "item.mc-course.metal_detector.no_valuables": "No Valuables Found!",
 
   "itemgroup.pink_garnet_group": "Pink Garnet Course Client",

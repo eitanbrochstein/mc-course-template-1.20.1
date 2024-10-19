@@ -3,6 +3,8 @@ package net.eitan.mccourse.util;
 import net.eitan.mccourse.block.ModBlocks;
 import net.eitan.mccourse.command.ReturnHomeCommand;
 import net.eitan.mccourse.command.SetHomeCommand;
+import net.eitan.mccourse.entity.ModEntities;
+import net.eitan.mccourse.entity.custom.PorcupineEntity;
 import net.eitan.mccourse.event.AttackEntityHandler;
 import net.eitan.mccourse.event.PlayerCopyHandler;
 import net.eitan.mccourse.item.ModItems;
@@ -12,6 +14,7 @@ import net.eitan.mccourse.villager.ModVillagers;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -33,12 +36,17 @@ public class ModRegistries {
         registerCustomTrades();
         registerStrippables();
         registerFlammables();
+        registerAttributes();
     }
 
     private static void registerFuels() {
         FuelRegistry registry = FuelRegistry.INSTANCE;
 
         registry.add(ModItems.PEAT_BRICK, 200);
+    }
+
+    public static void registerAttributes() {
+        FabricDefaultAttributeRegistry.register(ModEntities.PORCUPINE, PorcupineEntity.createPorcupineAttributes());
     }
 
     private static void registerCompostables() {

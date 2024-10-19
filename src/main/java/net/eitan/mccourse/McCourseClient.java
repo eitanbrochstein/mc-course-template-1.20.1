@@ -4,6 +4,10 @@ package net.eitan.mccourse;
 import net.eitan.mccourse.block.ModBlocks;
 import net.eitan.mccourse.block.entity.ModBlockEntities;
 import net.eitan.mccourse.block.entity.renderer.GemEmpoweringBlockEntityRenderer;
+import net.eitan.mccourse.entity.ModEntities;
+import net.eitan.mccourse.entity.client.PorcupineModel;
+import net.eitan.mccourse.entity.client.PorcupineRenderer;
+import net.eitan.mccourse.entity.layer.ModModelLayers;
 import net.eitan.mccourse.fluid.ModFluids;
 import net.eitan.mccourse.networking.ModMessages;
 import net.eitan.mccourse.particle.ModParticles;
@@ -18,6 +22,8 @@ import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.TexturedRenderLayers;
@@ -57,5 +63,9 @@ public class McCourseClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(ModBlockEntities.MOD_HANGING_SIGN_BLOCK_ENTITY, HangingSignBlockEntityRenderer::new);
 
         TexturedRenderLayers.SIGN_TYPE_TEXTURES.put(ModWoodTypes.DRIFTWOOD, TexturedRenderLayers.getSignTextureId(ModWoodTypes.DRIFTWOOD));
+
+        EntityModelLayerRegistry.registerModelLayer(ModModelLayers.PORCUPINE, PorcupineModel::getTexturedModelData);
+
+        EntityRendererRegistry.register(ModEntities.PORCUPINE, PorcupineRenderer::new);
     }
 }
