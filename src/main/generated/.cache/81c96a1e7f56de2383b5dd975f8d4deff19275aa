@@ -1,9 +1,9 @@
-// 1.20.1	2025-01-26T14:34:20.6439614	Mc Course/Tags for minecraft:block
+// 1.20.1	2025-01-26T15:03:18.4306146	Mc Course/Tags for minecraft:block
 f4168520dc899488679f86d6a4951288644253eb data\minecraft\tags\blocks\logs_that_burn.json
 f1cf80d32039fb3b9edb91d76a7e6baf0dee4a42 data\minecraft\tags\blocks\needs_diamond_tool.json
 c716880e6ff6532ef3f8279ddfa40285b01886f3 data\mc-course\tags\blocks\mineable\paxel.json
-c7194d8f77cc3cdcba1ceb565116504bd8550ef1 data\minecraft\tags\blocks\needs_iron_tool.json
 3de8b4ad0c14f6d781ac4124b5565f0b77407677 data\minecraft\tags\blocks\walls.json
+c7194d8f77cc3cdcba1ceb565116504bd8550ef1 data\minecraft\tags\blocks\needs_iron_tool.json
 d679cadce3e41914a198481360560a2ee0a01499 data\mc-course\tags\blocks\metal_detector_detectable_blocks.json
 0016cef15a11ceb022a07b9bbfc51043bdd70d2d data\minecraft\tags\blocks\fences.json
 50344871d0bafcb5f44496296678ec05d58fa32f data\minecraft\tags\blocks\mineable\pickaxe.json

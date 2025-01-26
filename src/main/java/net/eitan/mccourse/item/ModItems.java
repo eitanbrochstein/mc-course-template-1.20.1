@@ -5,6 +5,7 @@ import net.eitan.mccourse.block.ModBlocks;
 import net.eitan.mccourse.entity.ModEntities;
 import net.eitan.mccourse.entity.custom.PorcupineEntity;
 import net.eitan.mccourse.item.custom.DataTabletItem;
+import net.eitan.mccourse.item.custom.DiceItem;
 import net.eitan.mccourse.item.custom.MetalDetectorItem;
 import net.eitan.mccourse.item.custom.ModArmorItem;
 import net.eitan.mccourse.item.custom.ModPosionSword;
@@ -118,6 +119,9 @@ public class ModItems {
 
     public static final Item PORCUPINE_SPAWN_EGG = registerItem("porcupine_spawn_egg",
             new SpawnEggItem(ModEntities.PORCUPINE, 0xa86518, 0x3b260f, new FabricItemSettings()));
+
+    public static final Item DICE = registerItem("dice",
+        new DiceItem(new FabricItemSettings()));
 
     // Register a new item with a name, and the object item, the registries give the type to the Item
     private static Item registerItem(String name, Item item) {
