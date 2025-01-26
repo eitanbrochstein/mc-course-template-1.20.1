@@ -1,6 +1,7 @@
 package net.eitan.mccourse.entity;
 
 import net.eitan.mccourse.McCourse;
+import net.eitan.mccourse.entity.custom.DiceProjectileEntity;
 import net.eitan.mccourse.entity.custom.PorcupineEntity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
@@ -23,4 +24,9 @@ public class ModEntities {
     public static void registerModEntites() {
         McCourse.LOGGER.info("Registering Mod Entities for " + McCourse.MOD_ID);
     }
+
+    public static final EntityType<DiceProjectileEntity> THROWN_DICE_PROJECTILE = Registry.register(Registries.ENTITY_TYPE,
+            new Identifier(McCourse.MOD_ID, "dice_projectile"),
+            FabricEntityTypeBuilder.<DiceProjectileEntity>create(SpawnGroup.CREATURE, DiceProjectileEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.25f, 0.25f)).build());
 }

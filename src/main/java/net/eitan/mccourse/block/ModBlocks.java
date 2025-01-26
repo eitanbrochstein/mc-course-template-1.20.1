@@ -2,6 +2,7 @@ package net.eitan.mccourse.block;
 
 import net.eitan.mccourse.McCourse;
 import net.eitan.mccourse.block.custom.CauliflowerCropBlock;
+import net.eitan.mccourse.block.custom.DiceBlock;
 import net.eitan.mccourse.block.custom.GemEmpoweringStationBlock;
 import net.eitan.mccourse.block.custom.ModHangingSignBlock;
 import net.eitan.mccourse.block.custom.ModStandingSignBlock;
@@ -194,6 +195,10 @@ public class ModBlocks {
             new ModHangingSignBlock(FabricBlockSettings.copyOf(Blocks.ACACIA_HANGING_SIGN), ModWoodTypes.DRIFTWOOD), Rarity.COMMON);
     public static final Block DRIFTWOOD_HANGING_WALL_SIGN = registerBlockWithoutBlockItem("driftwood_hanging_wall_sign",
             new ModWallHangingSignBlock(FabricBlockSettings.copyOf(Blocks.ACACIA_WALL_HANGING_SIGN), ModWoodTypes.DRIFTWOOD), Rarity.COMMON);
+
+    public static final Block DICE_BLOCK = registerBlockWithoutBlockItem("dice_block",
+            new DiceBlock(FabricBlockSettings.copyOf(Blocks.STONE)), Rarity.RARE);
+
     
     private static Block registerBlockWithoutBlockItem(String name, Block block, Rarity rarity) {
         // minecraft type, name with mod id, block itself
