@@ -1,6 +1,4 @@
 {
   "replace": false,
-  "values": [
-    "mc-course:nether_pink_garnet_ore"
-  ]
+  "values": ["mc-course:nether_pink_garnet_ore"]
 }

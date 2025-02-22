@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mc-course:end_stone_pink_garnet_ore"
-            ]
+            "items": ["mc-course:end_stone_pink_garnet_ore"]
           }
         ]
       },
@@ -20,16 +18,9 @@
       "trigger": "minecraft:recipe_unlocked"
     }
   },
-  "requirements": [
-    [
-      "has_end_stone_pink_garnet_ore",
-      "has_the_recipe"
-    ]
-  ],
+  "requirements": [["has_end_stone_pink_garnet_ore", "has_the_recipe"]],
   "rewards": {
-    "recipes": [
-      "minecraft:pink_garnet_from_blasting_end_stone_pink_garnet_ore"
-    ]
+    "recipes": ["minecraft:pink_garnet_from_blasting_end_stone_pink_garnet_ore"]
   },
   "sends_telemetry_event": false
 }

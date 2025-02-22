@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:coal"
-            ]
+            "items": ["minecraft:coal"]
           }
         ]
       },
@@ -20,18 +18,9 @@
       "trigger": "minecraft:recipe_unlocked"
     }
   },
-  "requirements": [
-    [
-      "has_stick"
-    ],
-    [
-      "has_the_recipe"
-    ]
-  ],
+  "requirements": [["has_stick"], ["has_the_recipe"]],
   "rewards": {
-    "recipes": [
-      "minecraft:end_rod"
-    ]
+    "recipes": ["minecraft:end_rod"]
   },
   "sends_telemetry_event": true
 }

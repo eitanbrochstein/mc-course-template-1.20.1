@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mc-course:pink_garnet_block"
-            ]
+            "items": ["mc-course:pink_garnet_block"]
           }
         ]
       },
@@ -20,16 +18,9 @@
       "trigger": "minecraft:recipe_unlocked"
     }
   },
-  "requirements": [
-    [
-      "has_pink_garnet_block",
-      "has_the_recipe"
-    ]
-  ],
+  "requirements": [["has_pink_garnet_block", "has_the_recipe"]],
   "rewards": {
-    "recipes": [
-      "minecraft:pink_garnet"
-    ]
+    "recipes": ["minecraft:pink_garnet"]
   },
   "sends_telemetry_event": false
 }

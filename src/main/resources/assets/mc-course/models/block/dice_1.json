@@ -1,12 +1,12 @@
 {
-    "parent": "minecraft:block/cube",
-    "textures": {
-      "up": "mc-course:block/dice_1",
-      "down": "mc-course:block/dice_6",
-      "north": "mc-course:block/dice_2",
-      "east": "mc-course:block/dice_3",
-      "south": "mc-course:block/dice_5",
-      "west": "mc-course:block/dice_4",
-      "particle": "mc-course:block/dice_1"
-    }
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "up": "mc-course:block/dice_1",
+    "down": "mc-course:block/dice_6",
+    "north": "mc-course:block/dice_2",
+    "east": "mc-course:block/dice_3",
+    "south": "mc-course:block/dice_5",
+    "west": "mc-course:block/dice_4",
+    "particle": "mc-course:block/dice_1"
   }
+}

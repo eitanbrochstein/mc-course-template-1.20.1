@@ -1,7 +1,4 @@
 {
   "replace": false,
-  "values": [
-    "mc-course:bar_brawl_music_disc",
-    "mc-course:rickroll_music_disc"
-  ]
+  "values": ["mc-course:bar_brawl_music_disc", "mc-course:rickroll_music_disc"]
 }

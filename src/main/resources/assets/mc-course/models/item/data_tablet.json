@@ -1,14 +1,14 @@
 {
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "mc-course:item/data_tablet_off"
-    },
-    "overrides": [
-        {
-            "predicate": {
-                "mc-course:on": 1
-            },
-            "model": "mc-course:item/data_tablet_on"
-        }
-    ]
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "mc-course:item/data_tablet_off"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "mc-course:on": 1
+      },
+      "model": "mc-course:item/data_tablet_on"
+    }
+  ]
 }

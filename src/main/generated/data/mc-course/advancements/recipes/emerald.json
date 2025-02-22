@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:redstone"
-            ]
+            "items": ["minecraft:redstone"]
           }
         ]
       },
@@ -20,18 +18,9 @@
       "trigger": "minecraft:recipe_unlocked"
     }
   },
-  "requirements": [
-    [
-      "has_redstone"
-    ],
-    [
-      "has_the_recipe"
-    ]
-  ],
+  "requirements": [["has_redstone"], ["has_the_recipe"]],
   "rewards": {
-    "recipes": [
-      "minecraft:emerald"
-    ]
+    "recipes": ["minecraft:emerald"]
   },
   "sends_telemetry_event": true
 }

@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "mc-course:metal_detector"
-            ]
+            "items": ["mc-course:metal_detector"]
           }
         ]
       },
@@ -30,10 +28,6 @@
       "text": "Metal Detector"
     }
   },
-  "requirements": [
-    [
-      "has_pink_garnet"
-    ]
-  ],
+  "requirements": [["has_pink_garnet"]],
   "sends_telemetry_event": true
 }

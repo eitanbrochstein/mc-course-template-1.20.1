@@ -1,43 +1,31 @@
 {
-	"schemaVersion": 1,
-	"id": "mc-course",
-	"version": "${version}",
-	"name": "Mc Course",
-	"description": "This is an example description! Tell everyone what your mod is about!",
-	"authors": [
-		"25ejsb"
-	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "MIT",
-	"icon": "assets/mc-course/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"net.eitan.mccourse.McCourse"
-		],
-		"fabric-datagen": [
-			"net.eitan.mccourse.McCourseDataGenerator"
-		],
-		"client": [
-			"net.eitan.mccourse.McCourseClient"
-		],
-		"rei_client": [
-			"net.eitan.mccourse.compat.McCourseClientPlugin"
-		]
-	},
-	"mixins": [
-		"mc-course.mixins.json"
-	],
-	"depends": {
-		"fabricloader": ">=0.15.11",
-		"minecraft": "~1.20.1",
-		"java": ">=17",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
-	}
+  "schemaVersion": 1,
+  "id": "mc-course",
+  "version": "${version}",
+  "name": "Mc Course",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": ["25ejsb"],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "MIT",
+  "icon": "assets/mc-course/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["net.eitan.mccourse.McCourse"],
+    "fabric-datagen": ["net.eitan.mccourse.McCourseDataGenerator"],
+    "client": ["net.eitan.mccourse.McCourseClient"],
+    "rei_client": ["net.eitan.mccourse.compat.McCourseClientPlugin"]
+  },
+  "mixins": ["mc-course.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
 }

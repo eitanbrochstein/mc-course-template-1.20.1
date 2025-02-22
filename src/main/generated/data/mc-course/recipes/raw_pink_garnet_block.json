@@ -6,11 +6,7 @@
       "item": "mc-course:raw_pink_garnet"
     }
   },
-  "pattern": [
-    "###",
-    "###",
-    "###"
-  ],
+  "pattern": ["###", "###", "###"],
   "result": {
     "item": "mc-course:raw_pink_garnet_block"
   },

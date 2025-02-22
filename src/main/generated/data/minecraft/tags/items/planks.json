@@ -1,6 +1,4 @@
 {
   "replace": false,
-  "values": [
-    "mc-course:driftwood_planks"
-  ]
+  "values": ["mc-course:driftwood_planks"]
 }

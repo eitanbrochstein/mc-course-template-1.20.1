@@ -1,59 +1,45 @@
 {
-    "rickroll": {
-        "sounds": [
-            "mc-course:rickroll"
-        ]
-    },
-    "metal_detector_found_ore": {
-        "subtitle": "sound.mc-course.metal_detector_found_ore",
-        "sounds": [
-            "mc-course:metal_detector_found_ore"
-        ]
-    },
-    "pink_garnet_lamp_break": {
-        "subtitle": "sound.mc-course.pink_garnet_lamp_break",
-        "sounds": [
-            "mc-course:pink_garnet_lamp_break"
-        ]
-    },
-    "pink_garnet_lamp_step": {
-        "subtitle": "sound.mc-course.pink_garnet_lamp_step",
-        "sounds": [
-            "mc-course:pink_garnet_lamp_step"
-        ]
-    },
-    "pink_garnet_lamp_place": {
-        "subtitle": "sound.mc-course.pink_garnet_lamp_place",
-        "sounds": [
-            "mc-course:pink_garnet_lamp_place"
-        ]
-    },
-    "pink_garnet_lamp_hit": {
-        "subtitle": "sound.mc-course.pink_garnet_lamp_hit",
-        "sounds": [
-            "mc-course:pink_garnet_lamp_hit"
-        ]
-    },
-    "pink_garnet_lamp_fall": {
-        "subtitle": "sound.mc-course.pink_garnet_lamp_fall",
-        "sounds": [
-            "mc-course:pink_garnet_lamp_fall"
-        ]
-    },
-    "bar_brawl": {
-        "sounds": [
-            {
-                "name": "mc-course:bar_brawl",
-                "stream": true
-            }
-        ]
-    },
-    "rickroll_music_disc": {
-        "sounds": [
-            {
-                "name": "mc-course:rickroll",
-                "stream": true
-            }
-        ]
-    }
+  "rickroll": {
+    "sounds": ["mc-course:rickroll"]
+  },
+  "metal_detector_found_ore": {
+    "subtitle": "sound.mc-course.metal_detector_found_ore",
+    "sounds": ["mc-course:metal_detector_found_ore"]
+  },
+  "pink_garnet_lamp_break": {
+    "subtitle": "sound.mc-course.pink_garnet_lamp_break",
+    "sounds": ["mc-course:pink_garnet_lamp_break"]
+  },
+  "pink_garnet_lamp_step": {
+    "subtitle": "sound.mc-course.pink_garnet_lamp_step",
+    "sounds": ["mc-course:pink_garnet_lamp_step"]
+  },
+  "pink_garnet_lamp_place": {
+    "subtitle": "sound.mc-course.pink_garnet_lamp_place",
+    "sounds": ["mc-course:pink_garnet_lamp_place"]
+  },
+  "pink_garnet_lamp_hit": {
+    "subtitle": "sound.mc-course.pink_garnet_lamp_hit",
+    "sounds": ["mc-course:pink_garnet_lamp_hit"]
+  },
+  "pink_garnet_lamp_fall": {
+    "subtitle": "sound.mc-course.pink_garnet_lamp_fall",
+    "sounds": ["mc-course:pink_garnet_lamp_fall"]
+  },
+  "bar_brawl": {
+    "sounds": [
+      {
+        "name": "mc-course:bar_brawl",
+        "stream": true
+      }
+    ]
+  },
+  "rickroll_music_disc": {
+    "sounds": [
+      {
+        "name": "mc-course:rickroll",
+        "stream": true
+      }
+    ]
+  }
 }
