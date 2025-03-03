@@ -10,6 +10,7 @@ import net.eitan.mccourse.item.custom.MetalDetectorItem;
 import net.eitan.mccourse.item.custom.ModArmorItem;
 import net.eitan.mccourse.item.custom.ModPosionSword;
 import net.eitan.mccourse.item.custom.PaxelItem;
+import net.eitan.mccourse.item.custom.RadiationStaffItem;
 import net.eitan.mccourse.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
@@ -106,7 +107,7 @@ public class ModItems {
 
 
     public static final Item RADIATION_STAFF = registerItem("radiation_staff",
-            new Item(new FabricItemSettings().maxCount(1)));
+            new RadiationStaffItem(new FabricItemSettings().maxCount(1).maxDamage(1024)));
 
     public static final Item PINK_GARNET_BOW = registerItem("pink_garnet_bow",
             new BowItem(new FabricItemSettings().maxCount(1).maxDamage(500)));

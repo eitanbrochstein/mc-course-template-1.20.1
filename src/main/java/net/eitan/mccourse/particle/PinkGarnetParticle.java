@@ -15,7 +15,7 @@ public class PinkGarnetParticle extends SpriteBillboardParticle {
         this.velocityY = yd;
         this.velocityZ = zd;
 
-        this.scale += 0.75f;
+        this.scale *= 0.75f;
         this.maxAge = 10;
         this.setSpriteForAge(spriteSet);
 

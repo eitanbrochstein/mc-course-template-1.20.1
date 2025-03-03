@@ -5,6 +5,8 @@ import net.eitan.mccourse.block.ModBlocks;
 import net.eitan.mccourse.block.entity.ModBlockEntities;
 import net.eitan.mccourse.block.entity.renderer.GemEmpoweringBlockEntityRenderer;
 import net.eitan.mccourse.entity.ModEntities;
+import net.eitan.mccourse.entity.client.MagicProjectileModel;
+import net.eitan.mccourse.entity.client.MagicProjectileRenderer;
 import net.eitan.mccourse.entity.client.PorcupineModel;
 import net.eitan.mccourse.entity.client.PorcupineRenderer;
 import net.eitan.mccourse.entity.layer.ModModelLayers;
@@ -65,9 +67,13 @@ public class McCourseClient implements ClientModInitializer {
 
         TexturedRenderLayers.SIGN_TYPE_TEXTURES.put(ModWoodTypes.DRIFTWOOD, TexturedRenderLayers.getSignTextureId(ModWoodTypes.DRIFTWOOD));
 
+        // models
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.PORCUPINE, PorcupineModel::getTexturedModelData);
+        EntityModelLayerRegistry.registerModelLayer(ModModelLayers.MAGIC_PROJECTILE, MagicProjectileModel::getTexturedModelData);
 
+        // renderers
         EntityRendererRegistry.register(ModEntities.PORCUPINE, PorcupineRenderer::new);
         EntityRendererRegistry.register(ModEntities.THROWN_DICE_PROJECTILE, FlyingItemEntityRenderer::new);
+        EntityRendererRegistry.register(ModEntities.MAGIC_PROJECTILE, MagicProjectileRenderer::new);
     }
 }
