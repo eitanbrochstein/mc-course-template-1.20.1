@@ -6,7 +6,9 @@
     "ExampleMixin",
     "ModEntityDataSaverMixin",
     "PlayerEntityMixin",
-    "BrewingRecipeRegistryMixin"
+    "BrewingRecipeRegistryMixin",
+    "TrunkPlacerTypeInvoker",
+    "FoliagerPlacerTypesInvoker"
   ],
   "client": ["ItemRendererMixin", "ItemRendererAccessor", "ModelLoaderMixin"],
   "injectors": {

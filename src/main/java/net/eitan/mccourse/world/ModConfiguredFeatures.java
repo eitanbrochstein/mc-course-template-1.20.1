@@ -4,6 +4,9 @@ import java.util.List;
 
 import net.eitan.mccourse.McCourse;
 import net.eitan.mccourse.block.ModBlocks;
+import net.eitan.mccourse.world.tree.custom.DriftwoodFoliagePlacer;
+import net.eitan.mccourse.world.tree.custom.DriftwoodTrunkPlacer;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -14,14 +17,8 @@ import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.OreFeatureConfig;
-import net.minecraft.world.gen.feature.PlacedFeatures;
-import net.minecraft.world.gen.feature.RandomPatchFeatureConfig;
-import net.minecraft.world.gen.feature.SimpleBlockFeatureConfig;
-import net.minecraft.world.gen.feature.TreeFeatureConfig;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
@@ -36,6 +33,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> END_PINK_GARNET_ORE_KEY = registerKey("end_pink_garnet_ore");
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> PETUNIA_KEY = registerKey("petunia");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PINK_GARNET_GEODE_KEY = registerKey("pink_garnet_geode");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         // which blocks can be replaced by ore
@@ -59,10 +57,10 @@ public class ModConfiguredFeatures {
 
         register(context, DRIFTWOOD_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
             BlockStateProvider.of(ModBlocks.DRIFTWOOD_LOG), // the wood 
-            new StraightTrunkPlacer(5, 6, 3),
+            new DriftwoodTrunkPlacer(5, 6, 3),
             BlockStateProvider.of(ModBlocks.DRIFTWOOD_LEAVES), // the leaves
-            new BlobFoliagePlacer(ConstantIntProvider.create(5), ConstantIntProvider.create(2), 2), // how the leaves generate
-            new TwoLayersFeatureSize(1, 0, 2)).build()
+            new DriftwoodFoliagePlacer(ConstantIntProvider.create(5), ConstantIntProvider.create(2), 2), // how the leaves generate
+            new TwoLayersFeatureSize(1, 0, 2)).dirtProvider(BlockStateProvider.of(Blocks.END_STONE)).build()
         );
 
         register(context, PINK_GARNET_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldPinkGarnetOres, 12)); // size = average vein size
@@ -70,6 +68,21 @@ public class ModConfiguredFeatures {
         register(context, END_PINK_GARNET_ORE_KEY, Feature.ORE, new OreFeatureConfig(endPinkGarnetOres, 8));
         register(context, PETUNIA_KEY, Feature.FLOWER, new RandomPatchFeatureConfig(32, 6, 2, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK, 
             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.PETUNIA)))));
+
+        register(context, PINK_GARNET_GEODE_KEY, Feature.GEODE, new GeodeFeatureConfig(new GeodeLayerConfig(BlockStateProvider.of(Blocks.AIR),
+                    BlockStateProvider.of(Blocks.DEEPSLATE),
+                    BlockStateProvider.of(ModBlocks.PINK_GARNET_ORE),
+                    BlockStateProvider.of(Blocks.DIRT),
+                    BlockStateProvider.of(Blocks.EMERALD_BLOCK),
+                    List.of(ModBlocks.PINK_GARNET_BLOCK.getDefaultState()),
+                    BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS
+                ),
+                new GeodeLayerThicknessConfig(1.7D, 1.2D, 2.5D, 3.5D),
+                new GeodeCrackConfig(0.25D, 1.5D, 1),
+                0.5D, 0.1D,
+                true, UniformIntProvider.create(3, 8),
+                UniformIntProvider.create(2, 6), UniformIntProvider.create(1, 2),
+                -18, 18, 0.075D, 1));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

@@ -4,6 +4,7 @@ import net.eitan.mccourse.block.ModBlocks;
 import net.eitan.mccourse.block.entity.ModBlockEntities;
 import net.eitan.mccourse.effect.ModEffects;
 import net.eitan.mccourse.enchantment.ModEnchantments;
+import net.eitan.mccourse.entity.ModBoats;
 import net.eitan.mccourse.fluid.ModFluids;
 import net.eitan.mccourse.item.ModItemGroup;
 import net.eitan.mccourse.item.ModItems;
@@ -17,6 +18,8 @@ import net.eitan.mccourse.util.ModLootTableModifiers;
 import net.eitan.mccourse.util.ModRegistries;
 import net.eitan.mccourse.villager.ModVillagers;
 import net.eitan.mccourse.world.gen.ModWorldGeneration;
+import net.eitan.mccourse.world.tree.ModFoliagePlacerTypes;
+import net.eitan.mccourse.world.tree.ModTrunkPlacerTypes;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -54,5 +57,9 @@ public class McCourse implements ModInitializer {
 		ModRecipes.registerRecipes();
 
 		ModWorldGeneration.generateModWorldGeneration();
+		ModTrunkPlacerTypes.register();
+		ModFoliagePlacerTypes.register();
+
+		ModBoats.registerBoats();
 	}
 }

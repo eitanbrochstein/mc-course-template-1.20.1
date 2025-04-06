@@ -1,9 +1,11 @@
 package net.eitan.mccourse;
 
 
+import com.terraformersmc.terraform.boat.api.client.TerraformBoatClientHelper;
 import net.eitan.mccourse.block.ModBlocks;
 import net.eitan.mccourse.block.entity.ModBlockEntities;
 import net.eitan.mccourse.block.entity.renderer.GemEmpoweringBlockEntityRenderer;
+import net.eitan.mccourse.entity.ModBoats;
 import net.eitan.mccourse.entity.ModEntities;
 import net.eitan.mccourse.entity.client.MagicProjectileModel;
 import net.eitan.mccourse.entity.client.MagicProjectileRenderer;
@@ -75,5 +77,7 @@ public class McCourseClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.PORCUPINE, PorcupineRenderer::new);
         EntityRendererRegistry.register(ModEntities.THROWN_DICE_PROJECTILE, FlyingItemEntityRenderer::new);
         EntityRendererRegistry.register(ModEntities.MAGIC_PROJECTILE, MagicProjectileRenderer::new);
+
+        TerraformBoatClientHelper.registerModelLayers(ModBoats.DRIFTWOOD_BOAT_ID, false);
     }
 }

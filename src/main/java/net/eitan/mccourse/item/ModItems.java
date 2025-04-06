@@ -1,7 +1,9 @@
 package net.eitan.mccourse.item;
 
+import com.terraformersmc.terraform.boat.api.item.TerraformBoatItemHelper;
 import net.eitan.mccourse.McCourse;
 import net.eitan.mccourse.block.ModBlocks;
+import net.eitan.mccourse.entity.ModBoats;
 import net.eitan.mccourse.entity.ModEntities;
 import net.eitan.mccourse.entity.custom.PorcupineEntity;
 import net.eitan.mccourse.item.custom.DataTabletItem;
@@ -123,6 +125,9 @@ public class ModItems {
 
     public static final Item DICE = registerItem("dice",
         new DiceItem(new FabricItemSettings()));
+
+    public static final Item DRIFTWOOD_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.DRIFTWOOD_BOAT_ID, ModBoats.DRIFTWOOD_BOAT_KEY, false);
+    public static final Item DRIFTWOOD_CHEST_BOAT = TerraformBoatItemHelper.registerBoatItem(ModBoats.DRIFTWOOD_CHEST_BOAT_ID, ModBoats.DRIFTWOOD_BOAT_KEY, true);
 
     // Register a new item with a name, and the object item, the registries give the type to the Item
     private static Item registerItem(String name, Item item) {

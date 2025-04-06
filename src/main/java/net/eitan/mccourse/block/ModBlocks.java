@@ -5,6 +5,7 @@ import net.eitan.mccourse.block.custom.CauliflowerCropBlock;
 import net.eitan.mccourse.block.custom.DiceBlock;
 import net.eitan.mccourse.block.custom.GemEmpoweringStationBlock;
 import net.eitan.mccourse.block.custom.ModHangingSignBlock;
+import net.eitan.mccourse.block.custom.ModSaplingBlock;
 import net.eitan.mccourse.block.custom.ModStandingSignBlock;
 import net.eitan.mccourse.block.custom.ModWallHangingSignBlock;
 import net.eitan.mccourse.block.custom.ModWallSignBlock;
@@ -184,7 +185,7 @@ public class ModBlocks {
     );
 
     public static final Block DRIFTWOOD_SAPLING = registerBlock("driftwood_sapling", 
-        new SaplingBlock(new DriftwoodSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), Rarity.COMMON
+        new ModSaplingBlock(new DriftwoodSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), Rarity.COMMON
     );
 
     public static final Block DRIFTWOOD_SIGN = registerBlockWithoutBlockItem("driftwood_sign",

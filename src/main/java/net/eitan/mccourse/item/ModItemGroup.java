@@ -81,6 +81,9 @@ public class ModItemGroup {
 
                         entries.add(ModItems.PORCUPINE_SPAWN_EGG);
                         entries.add(ModItems.DICE);
+
+                        entries.add(ModItems.DRIFTWOOD_BOAT);
+                        entries.add(ModItems.DRIFTWOOD_CHEST_BOAT);
                     }).build());
 
     public static void registerItemGroups() {
